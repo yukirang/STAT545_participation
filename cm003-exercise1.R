@@ -72,3 +72,4 @@ if(variance > 10) {print("yes")
 ## 2. We programmed this worksheet *interactively*. Click "Source" to run it
 ##     from "top to bottom", sometimes called "batch mode". You might get
 ##     errors -- this happens when we rely too heavily on interactivity.
+#000
