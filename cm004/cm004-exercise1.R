@@ -73,3 +73,7 @@ if(variance > 10) {print("yes")
 ##     from "top to bottom", sometimes called "batch mode". You might get
 ##     errors -- this happens when we rely too heavily on interactivity.
 #000 cm004
+library("gapminder")
+str(gapminder)
+head(gapminder)
+summary(gapminder)
