@@ -122,7 +122,7 @@ Your task is to use metaprogramming to check whether a response (like the one ab
 gapminder %>% 
   filter((country == 'Canada' | country == 'Algeria') & year>=1960 & year < 1970)
 gapminder %>% 
-  filter(country %in% c("Cananda","Algeria"),year >=1960, year < 1970)
+  filter(country %in% c("Canada","Algeria"), year >= 1960, year < 1970)
 gapminder %>% 
   filter(pop > 1000000000)
          

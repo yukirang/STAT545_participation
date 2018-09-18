@@ -386,12 +386,14 @@ if (my_commute &gt; 30) {
 ## 3 Canada  Americas   1962    71.3 18985849    13462.
 ## 4 Canada  Americas   1967    72.1 20819767    16077.</code></pre>
 <pre class="r"><code>gapminder %&gt;% 
-  filter(country %in% c(&quot;Cananda&quot;,&quot;Algeria&quot;),year &gt;=1960, year &lt; 1970)</code></pre>
-<pre><code>## # A tibble: 2 x 6
+  filter(country %in% c(&quot;Canada&quot;,&quot;Algeria&quot;), year &gt;= 1960, year &lt; 1970)</code></pre>
+<pre><code>## # A tibble: 4 x 6
 ##   country continent  year lifeExp      pop gdpPercap
 ##   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
 ## 1 Algeria Africa     1962    48.3 11000948     2551.
-## 2 Algeria Africa     1967    51.4 12760499     3247.</code></pre>
+## 2 Algeria Africa     1967    51.4 12760499     3247.
+## 3 Canada  Americas   1962    71.3 18985849    13462.
+## 4 Canada  Americas   1967    72.1 20819767    16077.</code></pre>
 <pre class="r"><code>gapminder %&gt;% 
   filter(pop &gt; 1000000000)</code></pre>
 <pre><code>## # A tibble: 8 x 6
