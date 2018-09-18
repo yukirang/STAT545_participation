@@ -84,6 +84,8 @@ gapminder %>%
 ```{r}
 gapminder %>% 
   filter(pop > 100000000)
+  a <- c(1,4,5,6,7)
+  a > 5.5
 ```
 
 2. Of those, only take data from Asia.
@@ -116,8 +118,21 @@ Your task is to use metaprogramming to check whether a response (like the one ab
 # Relational/Comparison and Logical Operators in R
 
 1. Find all entries of Canada and Algeria occuring in the '60s. 
+```{r}
+gapminder %>% 
+  filter((country == 'Canada' | country == 'Algeria') & year>=1960 & year < 1970)
+gapminder %>% 
+  filter(country %in% c("Cananda","Algeria"),year >=1960, year < 1970)
+gapminder %>% 
+  filter(pop > 1000000000)
+         
+```
 
 2. Find all entries of Canada, and entries of Algeria occuring in the '60s. 
+```{r}
+
+```
+
 3. Find all entries _not_ including Canada and Algeria.
 
 # Bonus Exercises
