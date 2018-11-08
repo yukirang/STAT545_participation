@@ -363,6 +363,16 @@ map2_chr(name, commute, comm_fun)</code></pre>
   str_c(s, &quot; takes &quot;, t, &quot; minutes to get to work.&quot;)
 })</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cblsxXSBcIlBhcnZlZW4gdGFrZXMgMTAgbWludXRlcyB0byBnZXQgdG8gd29yay5cIlxuXG5bWzJdXVxuWzFdIFwiS2F5ZGVuIHRha2VzIDUwIG1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuXCJcblxuW1szXV1cblsxXSBcIlNoYXduIHRha2VzIDM1IG1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuXCJcbiJ9 -->
+<pre><code>[[1]]
+[1] &quot;Parveen takes 10 minutes to get to work.&quot;
+
+[[2]]
+[1] &quot;Kayden takes 50 minutes to get to work.&quot;
+
+[[3]]
+[1] &quot;Shawn takes 35 minutes to get to work.&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="3" style="list-style-type: decimal">
@@ -370,9 +380,13 @@ map2_chr(name, commute, comm_fun)</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWFwMihuYW1lLCBjb21tdXRlLCB+IEZJTExfVEhJU19JTilcbmBgYCJ9 -->
-<pre class="r"><code>map2(name, commute, ~ FILL_THIS_IN)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWFwMl9jaHIobmFtZSwgY29tbXV0ZSwgfiBzdHJfYygueCwgXCJ0YWtlXCIsIC55LCBcIm1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuXCIpKVxuYGBgIn0= -->
+<pre class="r"><code>map2_chr(name, commute, ~ str_c(.x, &quot;take&quot;, .y, &quot;minutes to get to work.&quot;))</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUGFydmVlbnRha2UxMG1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuXCIgXCJLYXlkZW50YWtlNTBtaW51dGVzIHRvIGdldCB0byB3b3JrLlwiIFxuWzNdIFwiU2hhd250YWtlMzVtaW51dGVzIHRvIGdldCB0byB3b3JrLlwiICBcbiJ9 -->
+<pre><code>[1] &quot;Parveentake10minutes to get to work.&quot; &quot;Kaydentake50minutes to get to work.&quot; 
+[3] &quot;Shawntake35minutes to get to work.&quot;  </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -392,6 +406,13 @@ map2_chr(name, commute, comm_fun)</code></pre>
   d = list(x=1, y=sum, z=iris)
 ))</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUE5MVp6VzRiVlJTKzlzejRMMjdxL1A4MGFidEE3R3FwbEgyOFlJUEVBdEVGM1ZXdU0wa043dGg0bkJCZzA2ZW9CRy9TUjBDQ0ZhdnVrSGlCVkswUVVZdk5uZkgzWGR1Zk0zSXFXQUFqM1p3NS85ODU5OTZabS9Gbkh6MzRvUEtnWW96Skd5L0ltYnhuYi8yOC9aTXp2aWtuOU13WWJ5MlIyckZzaDNkd2J0S3JZVUJMaGxkaTU4RXVSenZ5RFNQOHZGOGk4ZUtUSjdqMTQ2LzZBMHNTMVFWTTg4QlZqQWY5ZG5UY0J4dmNyZCtyM3hYc1hyMWV0K1NOaXVPd1owbHRTcVJWbDFyZFRxZlppME43UDhUWVNMTWJjODJPVlR1U3JtMmxQc2JjdG1NZlJkeENzeEkrQUYrdzR6M2NGKzE0SDdFUzN6TDBRMVRvT3Y4ZGpCTEZheWd2TXl3a3JYalltckpPa0l6R3ZEOUNlZUFEOE1ISVFSaEhXV29mUjkxKytEQTY2WFNRb0FLRU9mRERLV3BseFNURUs4ZzIwQmtmZnVzTzVMZ3JPVUNndmJYMVV2dW5FenVNbVprSVdwMW1ITXQwMWNLelhqK000M1kzaWorT0RzT3pDYWcweVJYQUJPOEFwank2ZXY0MHJxV2wwVlRjVmNUTi8vM3hMbmp5V2Z0eHNzL1NyUjNBNUZsai9TaTlHbXZmSjljUGpkV2ZrdXZueGlya2FHUmpnM3FScjBCT2Y5cXQzVXN2UjFkQXQwQTNrWWYyeEVFNWVkVzcvTVNOZU1UaktPT3dIbERhdTdpUWI4S1BkVENPeWxjRUQrMVdwUjhPaCtLVU9qWUUveDdvRHVMY0FDV09YZUlDN2gzMkdYYTd4TVg2WWI4Ri9UYjRiZlliZEpkOUFNOTUybFk1NDRCbmZzY0xqaHZRTS82MjRHZGRwQzZ2ckR2eXUxSTNjV21jYmFuRHphZXNNMUxXcWV1UWVSaG5UK3JtZk55VWZiUXZkZStCMHQ3TnIrd0g1bkY5Wkh6b1Nka1B0ejZRLzZiZzF2eXNVK2VMK24zd3QwQ3AxM25XUERzeVQ4VEYvT1JabjY0TG5WZldUYnhZZCs2NVZZVWVSNHBHR2ZGTHNLK0NYa2U4SmFGRlVOcGZnei8xSllsZmsvM051TVN4akw2UU1nN2pFazlGOUl5L0pQSElhMTJVMXhDbkJqbjF0R2NjNXMzS2swY2M5V01kSmVGcHg3b3FJbGU4akY4UVNqOVA1aU9BdjVIKzV5QXZpbjFKNnFNLzdYMVpIOHhQT1hrWFQrVGtxZmVSajdnOXdVMnEvZForVUU4Y3Z0VGhpNzNHMVQ1b1BaVUZmcnErZmRHVHI4cTYwbmlhdHl4NnJodld3M25SK1NnSVhsMVhPaDlaL0xMRWMvT2RzUTkwL1RoZWFDQzRLNUtmZlppTGIzaWx6NjJEMzhkK2pyNGV4ei80WTJ6azVHL0cvbzVYUFhuU2l6RXVwMzhKL2hYaTBJNzVOQS8xeXArTGZBZy81aU5WZkZuNnJEcUlVL0ZwZjhnclpSN2lVeHdaZlp5Y2R6RnZmSC9Yd1BPY1JqM3RPZi9VNi91QXorV2ErSEUvOFQzQ3VEWEp3M2hyZk40TFBzYmp1ZHFkdzhIcnVWU2Y2M3grTTgrNjFpbTRHZCs5ZDZCM2RZaWMvWEY5RUVyYzd2MEtlNTRmaUlmbnpVM3k4TnNWdkhwTzR6bkYvUjhCT2MrSGVqNVh2WjViM1BrUmNuZmVGdDZkSnpsZm5NZU1PdlFjdGltNHlldDVmVlBpYjJUNHovVVIrUFQvQS9MeS81YmhjK3RIN0tORjlBWG9MOWpQcW4rZTRmYzhRLzlDS09NcVZYdnl2MksvWitHOGFqMVp1SzlhWHhiZTM4QXY2cHRTZlo3cDgxSDVDL2lkaTV4eHppVU9lZXJWWHUzSTg3M3pWcDdQaTU3enBGbnZuNWVDbjNGWWw3NEhGNzB2Nk0rODVMVS9pcGVVZU1Eei9jLzNUOFBBRG4xdzV4N0tXZWRic2VNNXdsd2VqM0ozN3NUNWNDNVBmbmFlM0RuU1NIejZDZDQ1WE5TenYwT0psNU8rbzY4dXI1ZFJMK3ZTZW9iaTc4L1dNWmRmK29EUGNNL016S2U5Ly9UNEJ6NGwvaXVHOS84WU05K3NDNTN3Tk96d283WG5QdE9IZzI3Y0JGYzVEZnR4dTlYdGRQa1RSdm0wM1Q5dVIrMVdNK01yYitHbzJScFk4L1RiN3V4SDhxajVKR1MrQU1McS9iRFg3TlEvQ2FQandXTis1Qi9MUG04Zk9sSDEwM0F3WnphV1Rac1Y3L2ZDVmp0SmNpbTJ5bUZ6MEt3ZjlTME93VmJ1ZDcrdUUxK3lDL05QN1ovUmFQVEZwSkFsaG1PdmNtZTgrWVkzMzA3TUYyZDNBWDI2cysrNVI3eHA4ZVp3N0ZNZENjQS9MK2wwc2RzYkpGL1o4WEU5RUNDNXZnaXVuMFJKN1lkM1dvOVBvaS92ZkdnbXY2b1lwT09QRXJ6M3BRVE9aOEhPVURzS09lV2Q1cU93QTJiWjlqaHRjYjNYYjBjRGRzVks0L3FnYTZlU0VydmVLTUVQVzM4QlpodXFTZ0ljQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["a"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["b"],"name":[2],"type":["list"],"align":["right"]},{"label":["c"],"name":[3],"type":["list"],"align":["right"]},{"label":["d"],"name":[4],"type":["list"],"align":["right"]}],"data":[{"1":"1","2":"<dbl [1]>","3":"<builtin>","4":"<dbl [1]>"},{"1":"2","2":"<dbl [1]>","3":"<builtin>","4":"<builtin>"},{"1":"3","2":"<dbl [1]>","3":"<fun>","4":"<data.frame [150 × 5]>"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Printing to screen doesn’t reveal the contents! <code>str()</code> helps here:</p>
@@ -400,6 +421,27 @@ map2_chr(name, commute, comm_fun)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKGxpc3Rjb2xfdGliKVxuYGBgIn0= -->
 <pre class="r"><code>str(listcol_tib)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQ2xhc3NlcyDigJh0YmxfZGbigJksIOKAmHRibOKAmSBhbmQgJ2RhdGEuZnJhbWUnOlx0MyBvYnMuIG9mICA0IHZhcmlhYmxlczpcbiAkIGE6IG51bSAgMSAyIDNcbiAkIGI6TGlzdCBvZiAzXG4gIC4uJCA6IG51bSAxXG4gIC4uJCA6IG51bSAyXG4gIC4uJCA6IG51bSAzXG4gJCBjOkxpc3Qgb2YgM1xuICAuLiQgOmZ1bmN0aW9uICguLi4sIG5hLnJtID0gRkFMU0UpICBcbiAgLi4kIDpmdW5jdGlvbiAoeCkgIFxuICAuLiQgOmZ1bmN0aW9uICguLi4sIHNlcCA9IFwiXCIsIGNvbGxhcHNlID0gTlVMTCkgIFxuICQgZDpMaXN0IG9mIDNcbiAgLi4kIHg6IG51bSAxXG4gIC4uJCB5OmZ1bmN0aW9uICguLi4sIG5hLnJtID0gRkFMU0UpICBcbiAgLi4kIHo6J2RhdGEuZnJhbWUnOlx0MTUwIG9icy4gb2YgIDUgdmFyaWFibGVzOlxuICAuLiAuLiQgU2VwYWwuTGVuZ3RoOiBudW0gIDUuMSA0LjkgNC43IDQuNiA1IDUuNCA0LjYgNSA0LjQgNC45IC4uLlxuICAuLiAuLiQgU2VwYWwuV2lkdGggOiBudW0gIDMuNSAzIDMuMiAzLjEgMy42IDMuOSAzLjQgMy40IDIuOSAzLjEgLi4uXG4gIC4uIC4uJCBQZXRhbC5MZW5ndGg6IG51bSAgMS40IDEuNCAxLjMgMS41IDEuNCAxLjcgMS40IDEuNSAxLjQgMS41IC4uLlxuICAuLiAuLiQgUGV0YWwuV2lkdGggOiBudW0gIDAuMiAwLjIgMC4yIDAuMiAwLjIgMC40IDAuMyAwLjIgMC4yIDAuMSAuLi5cbiAgLi4gLi4kIFNwZWNpZXMgICAgIDogRmFjdG9yIHcvIDMgbGV2ZWxzIFwic2V0b3NhXCIsXCJ2ZXJzaWNvbG9yXCIsLi46IDEgMSAxIDEgMSAxIDEgMSAxIDEgLi4uXG4ifQ== -->
+<pre><code>Classes ‘tbl_df’, ‘tbl’ and 'data.frame':   3 obs. of  4 variables:
+ $ a: num  1 2 3
+ $ b:List of 3
+  ..$ : num 1
+  ..$ : num 2
+  ..$ : num 3
+ $ c:List of 3
+  ..$ :function (..., na.rm = FALSE)  
+  ..$ :function (x)  
+  ..$ :function (..., sep = &quot;&quot;, collapse = NULL)  
+ $ d:List of 3
+  ..$ x: num 1
+  ..$ y:function (..., na.rm = FALSE)  
+  ..$ z:'data.frame':   150 obs. of  5 variables:
+  .. ..$ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+  .. ..$ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+  .. ..$ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+  .. ..$ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+  .. ..$ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Extract a list column in the same way as a vector column:</p>
@@ -408,11 +450,24 @@ map2_chr(name, commute, comm_fun)</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQobGlzdGNvbF90aWIkYSkgICMgVmVjdG9yXG5gYGAifQ== -->
 <pre class="r"><code>print(listcol_tib$a)  # Vector</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzXG4ifQ== -->
+<pre><code>[1] 1 2 3</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQobGlzdGNvbF90aWIkYikgICMgTGlzdFxuYGBgIn0= -->
 <pre class="r"><code>print(listcol_tib$b)  # List</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cblsxXSAxXG5cbltbMl1dXG5bMV0gMlxuXG5bWzNdXVxuWzFdIDNcbiJ9 -->
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] 3</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>This is where <code>map()</code> comes in handy! Let’s make a tibble using the <code>got_chars</code> data, with two columns: “name” and “aliases”, where “aliases” is a list-column (remember that each character can have a number of aliases different than 1):</p>
@@ -422,9 +477,67 @@ map2_chr(name, commute, comm_fun)</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ290X2FsaWFzIDwtIGdvdF9jaGFycyAlPiUgRklMTF9USElTX0lOXG5gYGAifQ== -->
-<pre class="r"><code>got_alias &lt;- got_chars %&gt;% FILL_THIS_IN</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ290X2NoYXJzW1sxXV1cblxuYGBgIn0= -->
+<pre class="r"><code>got_chars[[1]]
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJHVybFxuWzFdIFwiaHR0cHM6Ly93d3cuYW5hcGlvZmljZWFuZGZpcmUuY29tL2FwaS9jaGFyYWN0ZXJzLzEwMjJcIlxuXG4kaWRcblsxXSAxMDIyXG5cbiRuYW1lXG5bMV0gXCJUaGVvbiBHcmV5am95XCJcblxuJGdlbmRlclxuWzFdIFwiTWFsZVwiXG5cbiRjdWx0dXJlXG5bMV0gXCJJcm9uYm9yblwiXG5cbiRib3JuXG5bMV0gXCJJbiAyNzggQUMgb3IgMjc5IEFDLCBhdCBQeWtlXCJcblxuJGRpZWRcblsxXSBcIlwiXG5cbiRhbGl2ZVxuWzFdIFRSVUVcblxuJHRpdGxlc1xuWzFdIFwiUHJpbmNlIG9mIFdpbnRlcmZlbGxcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG5bMl0gXCJDYXB0YWluIG9mIFNlYSBCaXRjaFwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcblszXSBcIkxvcmQgb2YgdGhlIElyb24gSXNsYW5kcyAoYnkgbGF3IG9mIHRoZSBncmVlbiBsYW5kcylcIlxuXG4kYWxpYXNlc1xuWzFdIFwiUHJpbmNlIG9mIEZvb2xzXCIgXCJUaGVvbiBUdXJuY2xvYWtcIiBcIlJlZWtcIiAgICAgICAgICAgIFwiVGhlb24gS2luc2xheWVyXCJcblxuJGZhdGhlclxuWzFdIFwiXCJcblxuJG1vdGhlclxuWzFdIFwiXCJcblxuJHNwb3VzZVxuWzFdIFwiXCJcblxuJGFsbGVnaWFuY2VzXG5bMV0gXCJIb3VzZSBHcmV5am95IG9mIFB5a2VcIlxuXG4kYm9va3NcblsxXSBcIkEgR2FtZSBvZiBUaHJvbmVzXCIgXCJBIFN0b3JtIG9mIFN3b3Jkc1wiIFwiQSBGZWFzdCBmb3IgQ3Jvd3NcIlxuXG4kcG92Qm9va3NcblsxXSBcIkEgQ2xhc2ggb2YgS2luZ3NcIiAgICAgXCJBIERhbmNlIHdpdGggRHJhZ29uc1wiXG5cbiR0dlNlcmllc1xuWzFdIFwiU2Vhc29uIDFcIiBcIlNlYXNvbiAyXCIgXCJTZWFzb24gM1wiIFwiU2Vhc29uIDRcIiBcIlNlYXNvbiA1XCIgXCJTZWFzb24gNlwiXG5cbiRwbGF5ZWRCeVxuWzFdIFwiQWxmaWUgQWxsZW5cIlxuIn0= -->
+<pre><code>$url
+[1] &quot;https://www.anapioficeandfire.com/api/characters/1022&quot;
+
+$id
+[1] 1022
+
+$name
+[1] &quot;Theon Greyjoy&quot;
+
+$gender
+[1] &quot;Male&quot;
+
+$culture
+[1] &quot;Ironborn&quot;
+
+$born
+[1] &quot;In 278 AC or 279 AC, at Pyke&quot;
+
+$died
+[1] &quot;&quot;
+
+$alive
+[1] TRUE
+
+$titles
+[1] &quot;Prince of Winterfell&quot;                                
+[2] &quot;Captain of Sea Bitch&quot;                                
+[3] &quot;Lord of the Iron Islands (by law of the green lands)&quot;
+
+$aliases
+[1] &quot;Prince of Fools&quot; &quot;Theon Turncloak&quot; &quot;Reek&quot;            &quot;Theon Kinslayer&quot;
+
+$father
+[1] &quot;&quot;
+
+$mother
+[1] &quot;&quot;
+
+$spouse
+[1] &quot;&quot;
+
+$allegiances
+[1] &quot;House Greyjoy of Pyke&quot;
+
+$books
+[1] &quot;A Game of Thrones&quot; &quot;A Storm of Swords&quot; &quot;A Feast for Crows&quot;
+
+$povBooks
+[1] &quot;A Clash of Kings&quot;     &quot;A Dance with Dragons&quot;
+
+$tvSeries
+[1] &quot;Season 1&quot; &quot;Season 2&quot; &quot;Season 3&quot; &quot;Season 4&quot; &quot;Season 5&quot; &quot;Season 6&quot;
+
+$playedBy
+[1] &quot;Alfie Allen&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Write the solution down carefully – we’ll be referring to <code>got_alias</code> later.</p>
@@ -440,11 +553,14 @@ map2_chr(name, commute, comm_fun)</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKGFsaWFzX2xpc3QgPC0gRklMTF9USElTX0lOKVxubmFtZXMoYWxpYXNfbGlzdCkgPC0gRklMTF9USElTX0lOXG5TVUJTRVRfSEVSRVxuYGBgIn0= -->
-<pre class="r"><code>(alias_list &lt;- FILL_THIS_IN)
-names(alias_list) &lt;- FILL_THIS_IN
-SUBSET_HERE</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWxpYXNfbGlzdFtbXCJNZWxpc2FuZHJlXCJdXVxuXG5gYGAifQ== -->
+<pre class="r"><code>alias_list[[&quot;Melisandre&quot;]]
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiVGhlIFJlZCBQcmllc3Rlc3NcIiAgICAgXCJUaGUgUmVkIFdvbWFuXCIgICAgICAgICBcIlRoZSBLaW5nJ3MgUmVkIFNoYWRvd1wiXG5bNF0gXCJMYWR5IFJlZFwiICAgICAgICAgICAgICBcIkxvdCBTZXZlblwiICAgICAgICAgICAgXG4ifQ== -->
+<pre><code>[1] &quot;The Red Priestess&quot;     &quot;The Red Woman&quot;         &quot;The King's Red Shadow&quot;
+[4] &quot;Lady Red&quot;              &quot;Lot Seven&quot;            </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Approach 2: With piping</p>
@@ -454,9 +570,16 @@ SUBSET_HERE</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ290X2FsaWFzICU+JSBGSUxMX1RISVNfSU5cbmBgYCJ9 -->
-<pre class="r"><code>got_alias %&gt;% FILL_THIS_IN</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0TmFtZXMobGV0dGVycywgTEVUVEVSUylcblxuYGBgIn0= -->
+<pre class="r"><code>setNames(letters, LETTERS)
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICBBICAgQiAgIEMgICBEICAgRSAgIEYgICBHICAgSCAgIEkgICBKICAgSyAgIEwgICBNICAgTiAgIE8gICBQICAgUSAgIFIgICBTICAgVCAgIFUgICBWICAgVyAgIFggXG5cImFcIiBcImJcIiBcImNcIiBcImRcIiBcImVcIiBcImZcIiBcImdcIiBcImhcIiBcImlcIiBcImpcIiBcImtcIiBcImxcIiBcIm1cIiBcIm5cIiBcIm9cIiBcInBcIiBcInFcIiBcInJcIiBcInNcIiBcInRcIiBcInVcIiBcInZcIiBcIndcIiBcInhcIiBcbiAgWSAgIFogXG5cInlcIiBcInpcIiBcbiJ9 -->
+<pre><code>  A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   P   Q   R   S   T   U   V   W   X 
+&quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot; &quot;s&quot; &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; 
+  Y   Z 
+&quot;y&quot; &quot;z&quot; </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -465,9 +588,13 @@ SUBSET_HERE</code></pre>
 <p><strong>Question</strong>: What would tidy data of <code>got_alias</code> look like? Remember what <code>got_alias</code> holds:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ290X2FsaWFzXG5gYGAifQ== -->
-<pre class="r"><code>got_alias</code></pre>
-<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MzB9LCJyZGYiOiJINHNJQUFBQUFBQUFBNjFYUzFQYlNCQld3QTdCWURDdzJVZlZia3EzUGNFaGxjUG02RWVDTjJCSU1JbVRZOXNhUzdPV1pwelJDRWUzL2EzN1E4TDJqTlJqV2JDM3BRcGI2c2YwNit2dThjM2c4OHZXNTVibmVWdmVkdk9KdDdXTmo0MHQvSGppTmJ4ZDgvM044N1pQcklEbmRmRC9SY2xvMzBaTUN2OWNzZnd2bVpmRXptMnVPRkl2UVFpZWFxWksrdEVuUHROZ1dac0tqUW1QNC9LNTFWVk0ra09wSVNvcHpYN0V0QzVmZHZxS3BTa1Q1ZXRoVjNHMHd2d1JLTTNjSWNjRFlJS3BQUFZ2UVlXZ2NxZHdNSUE3bWZwakJpdXBkTFEybW9NL1J1Y1dGRmpYYUYvREltSjRja25jNzZZUjFIdy83SUZTR0NVSVBEUk9pTHp6Q1JRa09ZWGU3aWtRQVFaZXRkSHBLYzZNODNKdS9IVGV0UHVBc2VRMTRUNVRLZU1Qa3JyL0pnaEFCUnV5aCsrQUoreUI2TUU3ZEtBdmtTaENMU2tqend4MUxPVEtSYzdVZ3dvZFhyQTdlRmpSMW9qRlBNWElGQ04zUmt3cExKZi9GdlZKK1VQR2hNWjROb3ZVSGtPeXdsY1RlMHl5ZTJNUUtaWEM4MDRzMWdyTU5laTQ5NHFMbWMzYVd5bmpsTWdGRkc4ekpXYXhCTXBGNDRheHhhYklCUmRwRERsR1VSeThSelZEdHY5bnNxVFhJY1R6QkNoUExjT2R5bnhOT1Q1SDdHbmp4d09rWDBvc3lXMis0dUwzMUI5SW1Ueks2SUdndkRXL3lEaVdaR3FZaFZMNXczVlg3RnpKMHl1Wk9tbk1yb3V3T1ZpQm1wZXhVTWQyYkN5bWtIMVlhdUNpeHZmK3AzZktYV01BZ21xNDdyNnhsaXFaU2tVWjJ6TmVmUlJUckJIMTFORkk2b2dwazhXQmdsQUtxdWZUZ2tGQmpxSThoV3B3WXg3Zm9SNWl5elgzWGttN2hJQjgyUzhPVGFwbldmV0N2cUgrazZHUElEQUFDYkU4QVdSaHBCMU1tblRrdFRBajdFSnc1Qkt5eXJFU21hR0MvVUNGSEtNM1ZweWlhaFhLQmdiVWYrTWtDOFBZbWVsUXQ5cVpOSlRZOVhPWXNRM3FSeEV3TlplU3pEZTZTbEhFdTVkWnNzd3JLZ1VCNTlqYW91YXp4ZFExOTlNSmc1U3RvWlluREtjcUpYNzhOWE9JYjQ0aDFsT3FISTRwVXpiTUxJSk1nT3ZoUm85cGl2ZkE1TFFYY3hINDUxelJoUHZCNGlDTWMvK1NheDB6d3lQN3V6aEJaaXhnSW5aQVFFTE8vZ09BV3lUMUpnMFZveENmR3dNWENoYk1OdURqaFR4ZWoyNFRRMC9HcEg3VVZaWThpYmhtVTl3QXhEZzBCVDAzczN3T0ZVUWRiWjUwN1E3YXdVZmNDMlI1bXhCWWJnY0U4YmQwd2RlWUgwSVl1c25jTUlXcmFUYk1JbkdyUjVIclNpN1dPOUhFUGtFSXM4Q2Z5SGhlTytHb1FEa1A2bXZubU5hUlBaRkJwdDFDMytERUdhc2wwaTJzMnl4MktEZzBYV2dtZ0dEVkhYcFU5aTV1QlB6Q21VbU1UamtJVExXUm5hb3Fnb1lnd3BYRTBac2k1WHN0b3UwclYzYzd3dGV2VnZkRHhwbXVacUpSNVpwZUw3ZEJCVHFYcGtrZkdleFc1WXZNUkdoRjFwY1N2bHpHZFlqK2ZLNzRmSzQzaDhyUVRJZEM3cGxyVUxNVUtpdjRCQ01vVnFCZEVvZ3JCOEFmYmZwUTFIaUhSVWJYNXBWN2orSDJsVnlkOW1YQ1RxL3ZuT09uaHZQNjlSODZzck1IcndFSlpqTW9CcTl4OGNwTU16UTNBVDBqUlB4aW03ZXcvNmk5MzRydWh0bWlLbWFPbTRBVEtzSXpYdFZhZHQvT1lVaVdFWENYNE9MMjRhaVBOMzJ6Q3FZYlRCWmVDUmlXS2FWR2FoTmpJdGY3K2puVkc4TTB2SEVFZ2N2NU13dlhHd2NkOUJvQnl1NVlmWE1lMHcxbmxHa0V0NTJybTdocXZGVXlwSlZVWGxZcXBGK05HOHVDdklxa1B3TzhxMmtwL1JpN3FOckR4WXBTUEhEelk0Y1FqMWNuOHROTXBQYzhERjJ6bGhiZlM3VTRuVVdTcmpNdEcyQlY4Z0JQc2NVYVYvRy9XOVJ6YldIUDFnL3JPa1RTWnVmdGxlTjd5aDFBOTd0NEdJNEsyL2pVSDNqRi9Kcnh1UGFyb2ptTElVMXI2VzBGb09Gc2p1T1IxY1VGMGtpY01OUXdSRElETWNkRmx0YjBkaEY1WjZUYk5ycC80OGY5L2YwL3hTelpFTjZSUzIzWHRiZDFZb0cyNmQyVE9pSTdtVEJIQjVqcFRDeE9YNzR5SVZoKzhkY3VuMTlVbnJjS205djNOVFEvWlNMazZ4dGhERk8zbEE4d0JodkNtUUVPamN3V1V0TXpqYitWM0srbkdWNklTMG94S0wvL0MwRVd2bnJlRFFBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["aliases"],"name":[2],"type":["list"],"align":["right"]}],"data":[{"1":"Theon Greyjoy","2":"<chr [4]>"},{"1":"Tyrion Lannister","2":"<chr [11]>"},{"1":"Victarion Greyjoy","2":"<chr [1]>"},{"1":"Will","2":"<chr [1]>"},{"1":"Areo Hotah","2":"<chr [1]>"},{"1":"Chett","2":"<chr [1]>"},{"1":"Cressen","2":"<chr [1]>"},{"1":"Arianne Martell","2":"<chr [1]>"},{"1":"Daenerys Targaryen","2":"<chr [11]>"},{"1":"Davos Seaworth","2":"<chr [5]>"},{"1":"Arya Stark","2":"<chr [16]>"},{"1":"Arys Oakheart","2":"<chr [1]>"},{"1":"Asha Greyjoy","2":"<chr [2]>"},{"1":"Barristan Selmy","2":"<chr [5]>"},{"1":"Varamyr","2":"<chr [3]>"},{"1":"Brandon Stark","2":"<chr [3]>"},{"1":"Brienne of Tarth","2":"<chr [3]>"},{"1":"Catelyn Stark","2":"<chr [5]>"},{"1":"Cersei Lannister","2":"<NULL>"},{"1":"Eddard Stark","2":"<chr [3]>"},{"1":"Jaime Lannister","2":"<chr [4]>"},{"1":"Jon Connington","2":"<chr [1]>"},{"1":"Jon Snow","2":"<chr [8]>"},{"1":"Aeron Greyjoy","2":"<chr [2]>"},{"1":"Kevan Lannister","2":"<chr [1]>"},{"1":"Melisandre","2":"<chr [5]>"},{"1":"Merrett Frey","2":"<chr [1]>"},{"1":"Quentyn Martell","2":"<chr [4]>"},{"1":"Samwell Tarly","2":"<chr [7]>"},{"1":"Sansa Stark","2":"<chr [3]>"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[30]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Let’s make a tidy data frame! First, let’s take a closer look at <code>tidyr::unnest()</code> after making a tibble of preferred ice cream flavours:</p>
@@ -481,6 +608,13 @@ SUBSET_HERE</code></pre>
                 c(&quot;garlic&quot;, &quot;tiger tail&quot;))
 ))</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVJ3VkxESUJEZGhFUk54anFkNlEvNEE4MmhCNzlBTDg1NDhkVHJodEtFa1VLSFVLczNmOXpHSllYUk1qSUR2SDI4dDdETDYrTjZWYTlyQU1pQmxSbmtqR0NSMDVKQkFaWGZQd0RZWWhJQXpHbXljRkErSXpkdERKNlUwQmlDbXhmcGVDK1VJcnlZSEpmT2VuQVdqNjJ3OWpNd0ZlOE5Od3FkaVBtVTJCa2RmSGtnYjcyUFMxSXBoZi9rdWxSZmRXaVY1RkhuWkNmc3ZVT3BrZ0pMcm5BWWdqbVM5UVlkTmx1TE81SEtOWEZEY2xmaHlZaTNDdDhUVTJYTnNZbkdtVGQrMFRLTzR6ZHRwMFI4YmZaT0drM1MzSGV2VEo2VzJZU1lIN1JQdlZueS9xRGZscXNILy83cC9EeG1BYk0vT0QvZnljYVFxNHhORTdxVCt2Y1hzQlVxQkhkVXcxUkNzN2RTdTlnb1lvZkdHWWRSVjlOSFJtWXFEazQvbVdHNUxXWUNBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["flav"],"name":[2],"type":["list"],"align":["right"]}],"data":[{"1":"Jacob","2":"<chr [3]>"},{"1":"Elena","2":"<chr [2]>"},{"1":"Mitchell","2":"<chr [2]>"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>I can make a tidy data frame <em>without</em> list columns using <code>tidyr::unnest()</code>:</p>
@@ -490,6 +624,13 @@ SUBSET_HERE</code></pre>
 <pre class="r"><code>icecream %&gt;% 
     unnest(flav)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6N30sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlJ6VTdETUF4MjA0YlNpcUZKdkFBdnNCNTI0UVhnZ3NTRjA2NXVsclVSV1RLbEdZTWJyODFsSmVrU0FRRkVwTVQyNTgrT2Z4NXZWOHQ2VlFNQWdaeG1RSEtuRnNROUdSUlFlZmtDa0Y5TkJJQzV1MlZ3MEh0a3V2M2Z1Sk5jNFcvRytZT3dyT2RTL3JDL2YxUVAxdUNoNWNhOEJxUml2V1phb3VVeHIrUmJyWUp4NGZsTU9LK1UrR2VPc3c2TkZDejZyZWk0dWJZb1pOSS9aUktISVpRVXdYcU5GcHVOd1MxUDZjcGhrVTRDV0hndzZodUp6MGxRWmZTaGlZRXpIL2ptbm5FYzM1MDRKdVJTNzZ6UXlsR0pYd3ROU3N0TUFzejN5cWRlTDFpL1YwK0w1WTJ2Zi9LZnppem81UmVkblA3TXg1Q0x4cUZ4MVFuMU9YVnNlZHplcGV0aGFxSFpHYUZzSEpSRGg4WnFpNUZYdThWRlpHb09qaC9MU1dsMWhRSUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["flav"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"Jacob","2":"strawberry"},{"1":"Jacob","2":"chocolate"},{"1":"Jacob","2":"lemon"},{"1":"Elena","2":"straciatella"},{"1":"Elena","2":"strawberry"},{"1":"Mitchell","2":"garlic"},{"1":"Mitchell","2":"tiger tail"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[7]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>How would I subset all people that like strawberry ice cream? We can either use the tidy data, or the list data directly:</p>
@@ -501,15 +642,29 @@ SUBSET_HERE</code></pre>
     unnest(flav) %&gt;% 
     filter(flav == &quot;strawberry&quot;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVF1NUxDSUJTOUlVRW56T2c0czk5aENxdjlnTFhaY2l2Ym00aHJSZ1FIaU81MmZua2lJQlF5VXR6SHVlYytEajlmdXczYk1RQWdVTklDU09uQ2lqaFRRQVcxOTM4QTVVY2dBS3lDZnhib04zYXFUY2xXY0lrWmd4bXI4ZFp5cmYvZklLOXJhQ2ZRbURnZ2dXeVBGcHVEeGpQUDZkSmhKdHRYZVRERkI0SFhyS25XNnRha3hvVnZ2RHN6VGRQbzNKaVI1K3BpZXlVZGxYajFORHV0MEJtd0dxUWZ2VjkzeDBHZTFwdFBmMytvUDk4aXh1UTE5anZMS2M2aWNkYU15OTllSmlsVVlNdEZUSlpPUTVEUVhIUXZiZm9vaDVyR0tvdUp4em9sRWhMRXdmZ0F4bHd0cmV3QkFBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["flav"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"Jacob","2":"strawberry"},{"1":"Elena","2":"strawberry"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>From list-column data:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWNlY3JlYW0gJT4lIFxuICBmaWx0ZXIobWFwX2xnbChmbGF2LCB+IEZJTExfVEhJU19JTikpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWNlY3JlYW0gJT4lIFxuICBmaWx0ZXIobWFwX2xnbChmbGF2LCB+IGFueSgueCA9PSBcInN0cmF3YmVycnlcIikpKVxuYGBgIn0= -->
 <pre class="r"><code>icecream %&gt;% 
-  filter(map_lgl(flav, ~ FILL_THIS_IN))</code></pre>
+  filter(map_lgl(flav, ~ any(.x == &quot;strawberry&quot;)))</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVJUVThESVJDZGhVV3p4Sm9tL281dWpQNEZ2WGowMU9zc3BYWWpoWWFsVm0vKzhsMkhMVVJMNU1BTWI5NmJMMTZmMWc5eUxRR0FBUmNWTUU1dXplaXFvSVltMms4QWZqY1RBSmF6UFFmRUN5clg1Y2V6MFJiSitjdmtLU2lINFBIVWFlKy9FdEtvblZQT1lOQlpiL1RlMmFMQ1RkU3BubGpHNEQrNUxoc1Z5dUF3cEJRWmxCc00yRzQ5N25WSnQ0UU5SY1U2Z3RuZkd2d29SSTEzcHpZTEYxSDRUZGMwVFNPWnNTQmZ1MFBvblNVcWkxc1JSV3VWTDREbDBjYlVtNVhhSGUzNzZ2RSs5ai9IejJlUmZIYnB4NXA4U3JsRXluV2w3VnR2ZjdlTG5UYnBjVXN6ekNPMEI5L2JrQmRGNk5BR0Z6RHpKSDFRUnViaFlQd0I4Q0xlM1M0Q0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["flav"],"name":[2],"type":["list"],"align":["right"]}],"data":[{"1":"Jacob","2":"<chr [3]>"},{"1":"Elena","2":"<chr [2]>"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -518,9 +673,18 @@ SUBSET_HERE</code></pre>
 <p><code>unnest()</code> the <code>got_alias</code> tibble. Hint: there should be a hiccup. Check out the <code>str()</code>ucture of <code>got_alias</code> – are all elements of the list column vectors? Would using <code>tidyr::drop_na()</code> be a good idea here?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRklMTF9USElTX0lOXG5gYGAifQ== -->
-<pre class="r"><code>FILL_THIS_IN</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ290X2FsaWFzICU+JSBcbiAgZHJvcF9uYSgpICU+JSBcbiAgdW5uZXN0KClcbmBgYCJ9 -->
+<pre class="r"><code>got_alias %&gt;% 
+  drop_na() %&gt;% 
+  unnest()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTE0fSwicmRmIjoiSDRzSUFBQUFBQUFBQSsxWVMzUGJOaEJtYkNtdVpjdXluYWFQbVhhR3Q1N3NRM3Bwam5va1ZtUExUaXduU284ckVTSlJnWUFDZ2xaNDZ5L29UNDY3QUFtUWxEM1R0T08wbldreUU0djhGc0JpZDc5OVNKZUR0MDlhYjF1ZTUyMTRtODBIM3NZbVBqWTI4TThEcitGdDY4LzNucmY1eUN6d3ZIMzhMd3RCK3lvaWd2c25rbVMvaXV4K3dQMnJURkpFejRCem1pZ2kvNmY0d1JzNlUyQkVkUWMxSnBTeDRyblZsVVQ0UTZFZ0twQm1QeUpLRlM5YmZVbVNoUERpdGRPVkZMVVFmd1JTRVhmSTRRQUlKekpML0N1UUljak1iZmdzOGJ5OUFWeUx4QjhUV0FtcG9rK01Za0F6OE1jWStNVm41QTZrM2RVeHVvQkZSSkREQmJqYlRTSll5NUs3c0U0UHBNUWNBNDV1Wi9FL0FXKzlBUWx4SmovcXRkMlR3QU5NK0pyRkh3M3U5eVFsT3IzRlhMUFljZXF2NHUwK1lIWEkxalIrQW5EM1dSQ0FEUDRXMW5rQk5DYTNxdWE5d0hzdjBMTjlnU0FQbGJDRjRBdU5qcmxZL1V2djdTNlJ0MXZvWFdEbmxGekQ3WTdTR2hGR0UrU05KUGVNN0k2SWxOaDIvT2Q0RDN1SlZ5bmhDaU5lYnpiM0FyZkhFSy93VmRPV1pmOEpjR2NNUEtuWHFqK0Q2ck5VNTZXa2ZHYVM4YmtRTExGd1BpTmRwWkxQbUFCN1VPT1NrRVY5eVNubENZUE1oWHNMWWYvbmVHbGZoOERtTVZnMnQ3UjBLcklTT1R6QjRVQnAvYmRHa1RPQjJYZVZyU2ovSWZFSFFzUjNDbnJBTFNHYXZ3akdoRlUxVEVNaC9XRTV0bXlkaTZOemtialZTQnRuV1hPd0FqbDN3NUcyUVRPOEQwc0YxTjdWKzhqUHhnQzRqVkRaNHNkS3lIZ3FwRDF0UjJ0NXphZm9ZOXRTRGtaQ1JVUnFid3draElMYmVEek1CZmF5b3loTG9IclpNV1hYdUE5NTZ5YUluUUk3ZzhCMXAvelF1SHFXMlo3anRlMWZhM3dFZ1E1d2lHNE9JQTJqTWppN0YxelBpS2VjSW1vWlVjd1drWjRzTUZGdElNWjRDN1BjV3RQS04rc3cycW96anRNd1pHVXROQzE0S0dSQzVqQWpOZlExRDRpY0MySFZOcnBTV2d1M3o5SjRtVlcyNUFDMjdWS1RvclBGMUZXdGh4TUNDU2twa3NVRXgxWHI2UEc3MURHMU9RYW1walpTMkZsMG1OQ1RTQklPTGlNYlBhS3NuWHZhaHoxR2VlQ2ZVR2tiM1pjbTdpSEwvRE9xRkNOYVp2VnZZMG1ia1lCdzVnS1BRR2F0c1FSNytDd0pKYkVtUGRZSG5rcFlFSk1vOVVBZGxoT0N2bXRQTUx2dG9Dc05QSW1vSWxNY2JLeWdvd04yb2x2OUhDcE1PYWlmZE9FTzJzSkhIRDhjbzRyeEFrbjVQbG5Ra3NORENFUFgxeG82TU01bjBubTVvNS96cTBxeEtMOUVhQnNuU0VVUytCUEJiS1llNUN5bHdmbzBjV2luREhNU2dWUzViM28xQ1V1dGI5MnNjSlV5RjgyT3poNmR1WnhVUjcrREl1ZXdTK0FIMWl3cjJDOFNXRWNOeFltc01tRUlQRndKTEgzV0k1dm5Mb2FtYkphdlp2MnJsQkpWdGRhZ09oOXJGZGVFLzB3bjFCMUYxR3o1UmFROE5FdXN0cjZreXlXenBuOXpJdWw4cnVvSlB5d3plTnNVM01wUThBaHZtcmNUVTRDUkU0NDhYeG5YNEZKOUd3d1lYbVZlK2RLbnBYMHBWa2Q5RVpPamkydDMwU010ZWZyMEp4V1p1b0NEVUl5ZUN2SmlxSzkycmlzTnFwdUFtdGtvZjJzU0xOZC9wNzd2OHd5RTJhSzZUQjgzQWJjb04wL2Z5aFkzVXhNaFhrWkF5NHBrUnA0MTFLc1M0aEtkZ3UyVW9Qc1RHK0syRlV4RTJmTWUyemlpT1ZvMmppQW9CekJEdVV0U2NUNlNqRnlYWHhydDJETktGUkt6VXRzYXo2VUliZmt2R25zRitrNnJYZWJ3S2hMK0RIQUtWVUw0REpsZnpiTzhIVWdhdU9oczR2Qmg3Nk9ydzBzYWhpNmhDazB2aFZ3Y3pTSmhzN3BsREttdTNNTlRqUFBIVmY1dTUvRXBOZXlZZUdDY2hoVW9MNVZUNm9pMjI4VkRNSTFOY2xwZTQvRDZMcVZzN1plazVvd0JSaVNmZkN6WUNrREI4UnhMRlZsZnpoR3p5emVzYnpWbzFRQ2oyRFNTdFgzYnlLQmp1N2V0OS82R2YyNXVibjdIanc5cmk3ZkVVcG1XNkczbzM3aWFhN2Q3SU5lQS9aVHJvd1AwY01vWFJ6OCswU1lZZWY2dlhUekx5dk5Hcm5QenBqaXJhU3N4NFNFdHB5WUdVOWNBOTlBR1k4S3hKb290YXkxRWsyTWxGTGlmZ0dZNExCYUlNYzc3OEFlbXJmUlYwaE1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["aliases"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"Theon Greyjoy","2":"Prince of Fools"},{"1":"Theon Greyjoy","2":"Theon Turncloak"},{"1":"Theon Greyjoy","2":"Reek"},{"1":"Theon Greyjoy","2":"Theon Kinslayer"},{"1":"Tyrion Lannister","2":"The Imp"},{"1":"Tyrion Lannister","2":"Halfman"},{"1":"Tyrion Lannister","2":"The boyman"},{"1":"Tyrion Lannister","2":"Giant of Lannister"},{"1":"Tyrion Lannister","2":"Lord Tywin's Doom"},{"1":"Tyrion Lannister","2":"Lord Tywin's Bane"},{"1":"Tyrion Lannister","2":"Yollo"},{"1":"Tyrion Lannister","2":"Hugor Hill"},{"1":"Tyrion Lannister","2":"No-Nose"},{"1":"Tyrion Lannister","2":"Freak"},{"1":"Tyrion Lannister","2":"Dwarf"},{"1":"Victarion Greyjoy","2":"The Iron Captain"},{"1":"Will","2":""},{"1":"Areo Hotah","2":""},{"1":"Chett","2":""},{"1":"Cressen","2":""},{"1":"Arianne Martell","2":""},{"1":"Daenerys Targaryen","2":"Dany"},{"1":"Daenerys Targaryen","2":"Daenerys Stormborn"},{"1":"Daenerys Targaryen","2":"The Unburnt"},{"1":"Daenerys Targaryen","2":"Mother of Dragons"},{"1":"Daenerys Targaryen","2":"Mother"},{"1":"Daenerys Targaryen","2":"Mhysa"},{"1":"Daenerys Targaryen","2":"The Silver Queen"},{"1":"Daenerys Targaryen","2":"Silver Lady"},{"1":"Daenerys Targaryen","2":"Dragonmother"},{"1":"Daenerys Targaryen","2":"The Dragon Queen"},{"1":"Daenerys Targaryen","2":"The Mad King's daughter"},{"1":"Davos Seaworth","2":"Onion Knight"},{"1":"Davos Seaworth","2":"Davos Shorthand"},{"1":"Davos Seaworth","2":"Ser Onions"},{"1":"Davos Seaworth","2":"Onion Lord"},{"1":"Davos Seaworth","2":"Smuggler"},{"1":"Arya Stark","2":"Arya Horseface"},{"1":"Arya Stark","2":"Arya Underfoot"},{"1":"Arya Stark","2":"Arry"},{"1":"Arya Stark","2":"Lumpyface"},{"1":"Arya Stark","2":"Lumpyhead"},{"1":"Arya Stark","2":"Stickboy"},{"1":"Arya Stark","2":"Weasel"},{"1":"Arya Stark","2":"Nymeria"},{"1":"Arya Stark","2":"Squan"},{"1":"Arya Stark","2":"Saltb"},{"1":"Arya Stark","2":"Cat of the Canaly"},{"1":"Arya Stark","2":"Bets"},{"1":"Arya Stark","2":"The Blind Girh"},{"1":"Arya Stark","2":"The Ugly Little Girl"},{"1":"Arya Stark","2":"Mercedenl"},{"1":"Arya Stark","2":"Mercye"},{"1":"Arys Oakheart","2":""},{"1":"Asha Greyjoy","2":"Esgred"},{"1":"Asha Greyjoy","2":"The Kraken's Daughter"},{"1":"Barristan Selmy","2":"Barristan the Bold"},{"1":"Barristan Selmy","2":"Arstan Whitebeard"},{"1":"Barristan Selmy","2":"Ser Grandfather"},{"1":"Barristan Selmy","2":"Barristan the Old"},{"1":"Barristan Selmy","2":"Old Ser"},{"1":"Varamyr","2":"Varamyr Sixskins"},{"1":"Varamyr","2":"Haggon"},{"1":"Varamyr","2":"Lump"},{"1":"Brandon Stark","2":"Bran"},{"1":"Brandon Stark","2":"Bran the Broken"},{"1":"Brandon Stark","2":"The Winged Wolf"},{"1":"Brienne of Tarth","2":"The Maid of Tarth"},{"1":"Brienne of Tarth","2":"Brienne the Beauty"},{"1":"Brienne of Tarth","2":"Brienne the Blue"},{"1":"Catelyn Stark","2":"Catelyn Tully"},{"1":"Catelyn Stark","2":"Lady Stoneheart"},{"1":"Catelyn Stark","2":"The Silent Sistet"},{"1":"Catelyn Stark","2":"Mother Mercilesr"},{"1":"Catelyn Stark","2":"The Hangwomans"},{"1":"Eddard Stark","2":"Ned"},{"1":"Eddard Stark","2":"The Ned"},{"1":"Eddard Stark","2":"The Quiet Wolf"},{"1":"Jaime Lannister","2":"The Kingslayer"},{"1":"Jaime Lannister","2":"The Lion of Lannister"},{"1":"Jaime Lannister","2":"The Young Lion"},{"1":"Jaime Lannister","2":"Cripple"},{"1":"Jon Connington","2":"Griffthe Mad King's Hand"},{"1":"Jon Snow","2":"Lord Snow"},{"1":"Jon Snow","2":"Ned Stark's Bastard"},{"1":"Jon Snow","2":"The Snow of Winterfell"},{"1":"Jon Snow","2":"The Crow-Come-Over"},{"1":"Jon Snow","2":"The 998th Lord Commander of the Night's Watch"},{"1":"Jon Snow","2":"The Bastard of Winterfell"},{"1":"Jon Snow","2":"The Black Bastard of the Wall"},{"1":"Jon Snow","2":"Lord Crow"},{"1":"Aeron Greyjoy","2":"The Damphair"},{"1":"Aeron Greyjoy","2":"Aeron Damphair"},{"1":"Kevan Lannister","2":""},{"1":"Melisandre","2":"The Red Priestess"},{"1":"Melisandre","2":"The Red Woman"},{"1":"Melisandre","2":"The King's Red Shadow"},{"1":"Melisandre","2":"Lady Red"},{"1":"Melisandre","2":"Lot Seven"},{"1":"Merrett Frey","2":"Merrett Muttonhead"},{"1":"Quentyn Martell","2":"Frog"},{"1":"Quentyn Martell","2":"Prince Frog"},{"1":"Quentyn Martell","2":"The prince who came too late"},{"1":"Quentyn Martell","2":"The Dragonrider"},{"1":"Samwell Tarly","2":"Sam"},{"1":"Samwell Tarly","2":"Ser Piggy"},{"1":"Samwell Tarly","2":"Prince Pork-chop"},{"1":"Samwell Tarly","2":"Lady Piggy"},{"1":"Samwell Tarly","2":"Sam the Slayer"},{"1":"Samwell Tarly","2":"Black Sam"},{"1":"Samwell Tarly","2":"Lord of Ham"},{"1":"Sansa Stark","2":"Little bird"},{"1":"Sansa Stark","2":"Alayne Stone"},{"1":"Sansa Stark","2":"Jonquil"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[114]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>We can also do the opposite with <code>tidyr::nest()</code>. Try it with the <code>iris</code> data frame:</p>
@@ -530,9 +694,18 @@ SUBSET_HERE</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRklMTF9USElTX0lOXG5gYGAifQ== -->
-<pre class="r"><code>FILL_THIS_IN</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpcyAlPiUgXG4gIGdyb3VwX2J5KFNwZWNpZXMpICU+JSBcbiAgbmVzdCgpXG5gYGAifQ== -->
+<pre class="r"><code>iris %&gt;% 
+  group_by(Species) %&gt;% 
+  nest()</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUE5V1l6MjRiVlJUR3IrMXhFanRwY09Ja1RkS1VQa0c5YUNXMjlZSWxDMFFYZElkY1o5SmFHRHV5M2NDUzEyamZwSStBQkd4WWRZZkVDNlNpcXFnSUNUT2U3M2VSUDNlVWJycGdwT1Q0L0xubmZPZmU4WHhuL05YbmorNDFIelZEQ05WUXExZEN0Wlo5VEtyWnYwcElRaU9YUDRSUWE4OERRdTFHSm10ejUxelBQeThFcnd6VHMzUTR6VDYxNWw1WnArbHNQTzFKYTU2bGsrbWdQeDZPSjdJMHpnYVRKNFBSb04remRQWCtzRGNsVzZ4eDB1dlBzclVoWEdaLzdRTEZIR0dTL1cxbWYvZTZPeWZ6cTl0K25sOHZ1dHMvNTljdjNXM1pkOEw4NnU3aU4vdVc3S3ducm4xL2ZrVzVKWGxUY2s5MWlBY0hkblQzeC9yZ1ZqN3dSRWtlK3BFa1B1YVZmVS9yNklNOGJ0OHlQTVJ0MjM1RUhJN1QrdGhkeEIvUFpVUHIxeVFieXJzbXZCdVNuMmo5dXNsVlNlSnZhRDMrTmN2Zk12emtCY2VtOENMSlExN3dOTTFQL25YTGgrNTlZVzhwVDB0Mi9NU1RoN3BsZGFySzQrdm9ZODEwNHVoTC9YQXVEOTRXZXBSdml2b1AvaXJ5UlB2ZkJZNm91eDhkK2E2b0YvMnZwZitwUE1SUnordmdkLzNjN0pkYVJ6Mms0eXZ6bC9VQlRzZm4rNFB1a2pyZ2N4d2wreGpQNVNmRlhTZGZTZjRtdk81L1diTHVaWW4vbFVueXV2UjQ5Ti9WVHhuT0QrMm5EUGVIOWxlRzl3L3AxKzJiU2FlblVlKzdGSHBLWk54NG1KNzJocDB2MHRHVDJWUFoxZ3ZiMTRQamFOcjRNcDB0aFJXMklteXhWR015L3I1RHVaeUZxejltLzY2dXJuNHRBbXRYd1RoMzluajR6ZkdKdEZxbVFiL0h2Vm12Y3pMSmNvVTVoUnAxSHVuUmNWQzAzTDBsQ1dVY1NrSnBCM28wUVNXSFVBaFVwZmliOHU5TDMxZmNudVFobENVZFN0MTNPM21rVXovcWh1T1cvT1RmTi96MGhZeDFwZThhN2tQckcxeWVaOS82aU5STFBQWEJaU09DN1BGY0dzS0JoRHFnZ2hXVFVGWk45YUhPdXRZSDRZRXFLckt2V2p4MWlHTTk4WW5zNEtJK2R2U1l6K3pvK0JQVkEzZk5jQ09kR24wLzhJTWpzVDRTaS9lOHZnL1dUenlYT0ZyS3ovZWdKWjJSQ0QveG5BOStIMDBZRVZxMmp0R0FrWWE4TGF0RHZyWmt5L0NSanhFMmpyeDJ2NUxQUnd4R0NlcnNlSitHbS94eEJKSS85bUYyOWlmdWcwbHd4MUZ2OFZ4S1I1SXk2bjZuUi8yNTJjbHpibm5ROFh1OHg2RXpBbDNZcUhEZHlJRXNHNFZlRzM3eTBKZVBaTmVOTHF5bkxycnZqK05GZ3VjTno3R2NwaEpvNnFPd1pUM1AvbEhKa1ljK0QvVWozYVRZSWNkUFplZkxkaHUvYnQ0alNlSWoyU29PVXFCT0pEWHl5NCtFbkNKWnF6NytnNUw2a0k2VEovN2IwdTlJNG5mUzlUckVPUzdxbzlPZms3U1RMSDJEVjBOQVBCY2VGbVVQY1g4dlRNeVB6c01WTXZOOFRtb044L053aEZ3Z1NTZkhGY1BidEh6NHk4Z1NmZFB5SVozc25DVGpmcUNickJ2dXB0Vm5INWJ5QjY3aVhEaC95SUhoamZ1VDgyZFlnelQ4ZThaOUZuOC80WHRDZnF2amZyL3Y0akFtZXh4ZVRZL0RtZUloeDNaSkgvNDkyalBjNkQ3ODdsbiszWkwxUy9zb2ZENXNvOXZ2VFBGY2RINjhsM2FESHRvWGR0OWloM1F1TEk3N0lMdy9IL1k0eEduWVdxcURYYVFVaDdKZytWbG5lSmR3NFlmc0xpMWZ4VWp3cmZ6VXJaWDBTMS9lejZXdFR4YjdXS3B2Ky9BL0pjZUY1WlgzUlMyMFZWWEU2c1BUdEQvSTNtUUxOY2tYbEdEODU3OUNzY0RxK0hRMkdJK3lGK0ZxVHM1MXExK1ptS0gxYkpTL09CL2Y3VDk5TnZyMjd2M1BjcENoK0EwN3FGNGxGTDlyODdscTBPdnNUYmJIZzFISysvK3c5emhsZHphek4vVDVDM3JuZERJWXpkaU56RHJ0ek1iWllXRHBqNGRZaXArd0wvOEZQdzUvNW9VWEFBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Species"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["data"],"name":[2],"type":["list"],"align":["right"]}],"data":[{"1":"setosa","2":"<tibble>"},{"1":"versicolor","2":"<tibble>"},{"1":"virginica","2":"<tibble>"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Keep the nested <code>iris</code> data frame above going! Keep piping:</p>
@@ -578,7 +751,7 @@ SUBSET_HERE</code></pre>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ2xhc3MgTWVldGluZyA0IFdvcmtzaGVldCIKb3V0cHV0OgogICAgaHRtbF9ub3RlYm9vazoKICAgICAgICB0b2M6IHRydWUKICAgICAgICB0aGVtZTogY2VydWxlYW4KICAgICAgICBudW1iZXJfc2VjdGlvbnM6IHRydWUKZWRpdG9yX29wdGlvbnM6IAogIGNodW5rX291dHB1dF90eXBlOiBpbmxpbmUKLS0tCgpgYGB7cn0Kc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKGxpYnJhcnkodGlkeXZlcnNlKSkKbGlicmFyeShyZXB1cnJyc2l2ZSkKYGBgCgojIFJlc291cmNlcwoKQWxsIGFyZSBmcm9tIFtKZW5ueSdzIGBwdXJycmAgdHV0b3JpYWxdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvKS4gU3BlY2lmaWNhbGx5OgogCi0gUGFyYWxsZWwgbWFwcGluZzogW0plbm55J3MgIlNwZWNpZnlpbmcgdGhlIGZ1bmN0aW9uIGluIG1hcCgpICsgcGFyYWxsZWwgbWFwcGluZyJdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvbHMwM19tYXAtZnVuY3Rpb24tc3ludGF4Lmh0bWwjcGFyYWxsZWxfbWFwKQotIExpc3QgY29sdW1ucyBpbiBkYXRhIGZyYW1lczsgbmVzdGluZzogW0plbm55J3MgIkxpc3QgQ29sdW1ucyJdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvbHMxM19saXN0LWNvbHVtbnMuaHRtbCkuCgpUaGUgYWxsLWVuY29tcGFzc2luZyBhcHBsaWNhdGlvbiBuZWFyIHRoZSBib3R0b20gb2YgdGhpcyB3b3Jrc2hlZXQgaXMgZnJvbSBbSmVubnkncyAiU2FtcGxlIGZyb20gZ3JvdXBzLCBuIHZhcmllcyBieSBncm91cCJdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvbHMxMl9kaWZmZXJlbnQtc2l6ZWQtc2FtcGxlcy5odG1sKQoKCgojIFBhcmFsbGVsIE1hcHBpbmcKCldlJ3JlIGdvaW5nIHRvIHdvcmsgd2l0aCB0b3kgY2FzZXMgZmlyc3QgYmVmb3JlIHRoZSBtb3JlIHJlYWxpc3RpYyBkYXRhIGFuYWx5dGljIHRhc2tzLCBiZWNhdXNlIHRoZXkgYXJlIGVhc2llciB0byBsZWFybi4KCldhbnQgdG8gdmVjdG9yaXplIG92ZXIgdHdvIGl0ZXJhYmxlcz8gVXNlIHRoZSBgbWFwMmAgZmFtaWx5OgoKYGBge3J9CmEgPC0gYygxLDIsMykKYiA8LSBjKDQsNSw2KQptYXAyKGEsIGIsIGZ1bmN0aW9uKHgsIHkpIHgqeSkKYGBgCmBgYHtyfQptYXAyKGEsIGIsIH4gLnggKiAueSkKYGBgCmBgYHtyfQptYXAyKGEsIGIsIGAqYCkKYGBgCmBgYHtyfQptYXAyX2RibChhLCBiLCBgKmApCmBgYAoKTW9yZSB0aGFuIDI/IFVzZSB0aGUgYHBtYXBgIGZhbWlseToKCmBgYHtyfQphIDwtIGMoMSwyLDMpCmIgPC0gYyg0LDUsNikKYyA8LSBjKDcsOCw5KQpwbWFwKGxpc3QoYSwgYiwgYyksIGZ1bmN0aW9uKHgsIHksIHopIHgqeSp6KQpgYGAKYGBge3J9CnBtYXAobGlzdChhLCBiLCBjKSwgfiAuLjEgKiAuLjIgKiAuLjMpCmBgYApgYGB7cn0KcG1hcF9kYmwobGlzdChhLCBiLCBjKSwgfiAuLjEgKiAuLjIgKiAuLjMpCmBgYAoKIyMgWW91ciBUdXJuCgpVc2luZyB0aGUgZm9sbG93aW5nIHR3byB2ZWN0b3JzLi4uCgpgYGB7cn0KY29tbXV0ZSA8LSBjKDEwLCA1MCwgMzUpCm5hbWUgPC0gYygiUGFydmVlbiIsICJLYXlkZW4iLCAiU2hhd24iKQpgYGAKCnVzZSBgbWFwMl9jaHIoKWAgdG8gY29tZSB1cCB3aXRoIHRoZSBmb2xsb3dpbmcgb3V0cHV0IGluIHRocmVlIHdheXM6CgpgYGB7cn0Kc3RyX2MobmFtZSwgIiB0YWtlcyAiLCBjb21tdXRlLCAiIG1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuIikKYGBgCgoxLiBCeSBkZWZpbmluZyBhIGZ1bmN0aW9uIGJlZm9yZSBmZWVkaW5nIGl0IGludG8gYG1hcDIoKWAgLS0gY2FsbCBpdCBgY29tbV9mdW5gLgoKYGBge3J9CmNvbW1fZnVuIDwtIGZ1bmN0aW9uKHMsIHQpIAogIHN0cl9jKHMsICIgdGFrZXMgIiwgdCwgIiBtaW51dGVzIHRvIGdldCB0byB3b3JrLiIpCm1hcDJfY2hyKG5hbWUsIGNvbW11dGUsIGNvbW1fZnVuKQojIHZlY3RvciBsZW5ndGggbmVlZCB0byBiZSB0aGUgc2FtZQpgYGAKCjIuIEJ5IGRlZmluaW5nIGEgZnVuY3Rpb24gIm9uIHRoZSBmbHkiIHdpdGhpbiB0aGUgYG1hcDIoKWAgZnVuY3Rpb24uCgpgYGB7cn0KbWFwMihuYW1lLCBjb21tdXRlLCBmdW5jdGlvbihzLCB0KSB7CiAgc3RyX2MocywgIiB0YWtlcyAiLCB0LCAiIG1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuIikKfSkKYGBgCgozLiBCeSBkZWZpbmluZyBhIGZvcm11bGEuCgpgYGB7cn0KbWFwMihuYW1lLCBjb21tdXRlLCB+IEZJTExfVEhJU19JTikKYGBgCgoKIyBMaXN0IGNvbHVtbnMKCiMjIFdoYXQgYXJlIHRoZXk/CgpBIHRpYmJsZSBjYW4gaG9sZCBhIGxpc3QgYXMgYSBjb2x1bW4sIHRvbzoKCmBgYHtyfQoobGlzdGNvbF90aWIgPC0gdGliYmxlKAogIGEgPSBjKDEsMiwzKSwKICBiID0gbGlzdCgxLDIsMyksCiAgYyA9IGxpc3Qoc3VtLCBzcXJ0LCBzdHJfYyksCiAgZCA9IGxpc3QoeD0xLCB5PXN1bSwgej1pcmlzKQopKQpgYGAKClByaW50aW5nIHRvIHNjcmVlbiBkb2Vzbid0IHJldmVhbCB0aGUgY29udGVudHMhIGBzdHIoKWAgaGVscHMgaGVyZToKCmBgYHtyfQpzdHIobGlzdGNvbF90aWIpCmBgYAoKRXh0cmFjdCBhIGxpc3QgY29sdW1uIGluIHRoZSBzYW1lIHdheSBhcyBhIHZlY3RvciBjb2x1bW46CgpgYGB7cn0KcHJpbnQobGlzdGNvbF90aWIkYSkgICMgVmVjdG9yCmBgYApgYGB7cn0KcHJpbnQobGlzdGNvbF90aWIkYikgICMgTGlzdApgYGAKClRoaXMgaXMgd2hlcmUgYG1hcCgpYCBjb21lcyBpbiBoYW5keSEgTGV0J3MgbWFrZSBhIHRpYmJsZSB1c2luZyB0aGUgYGdvdF9jaGFyc2AgZGF0YSwgd2l0aCB0d28gY29sdW1uczogIm5hbWUiIGFuZCAiYWxpYXNlcyIsIHdoZXJlICJhbGlhc2VzIiBpcyBhIGxpc3QtY29sdW1uIChyZW1lbWJlciB0aGF0IGVhY2ggY2hhcmFjdGVyIGNhbiBoYXZlIGEgbnVtYmVyIG9mIGFsaWFzZXMgZGlmZmVyZW50IHRoYW4gMSk6CgoxLiBQaXBlIGBnb3RfY2hhcnNgIGludG8gYHtgIHdpdGggYHRpYmJsZSgpYC4KMi4gU3BlY2lmeSB0aGUgY29sdW1ucyB3aXRoIGBwdXJycmAgbWFwcGluZ3MuCgpgYGB7cn0KZ290X2FsaWFzIDwtIGdvdF9jaGFycyAlPiUgRklMTF9USElTX0lOCmBgYAoKV3JpdGUgdGhlIHNvbHV0aW9uIGRvd24gY2FyZWZ1bGx5IC0tIHdlJ2xsIGJlIHJlZmVycmluZyB0byBgZ290X2FsaWFzYCBsYXRlci4gCgojIyBNYWtpbmc6IFlvdXIgVHVybgoKRXh0cmFjdCB0aGUgYWxpYXNlcyBvZiBNZWxpc2FuZHJlIChhIGNoYXJhY3RlciBmcm9tIEdhbWUgb2YgVGhyb25lcykgZnJvbSB0aGUgYGdvdF9hbGlhc2AgZGF0YSBmcmFtZSB3ZSBqdXN0IG1hZGUuIFRyeSB0d28gYXBwcm9hY2hlczoKCkFwcHJvYWNoIDE6IFdpdGhvdXQgcGlwaW5nCgoxLiBNYWtlIGEgbGlzdCBvZiBhbGlhc2VzIGJ5IGV4dHJhY3RpbmcgdGhlIGxpc3QgY29sdW1uIGluIGBnb3RfYWxpYXNgLgoyLiBTZXQgdGhlIG5hbWVzIG9mIHRoaXMgbmV3IGxpc3QgYXMgdGhlIGNoYXJhY3RlciBuYW1lcyAoZnJvbSB0aGUgb3RoZXIgY29sdW1uIG9mIGBnb3RfY2hhcnNgKS4KMy4gU3Vic2V0IHRoZSBuZXdseS1uYW1lZCBsaXN0IHRvIE1lbGlzYW5kcmUuCgpgYGB7cn0KKGFsaWFzX2xpc3QgPC0gRklMTF9USElTX0lOKQpuYW1lcyhhbGlhc19saXN0KSA8LSBGSUxMX1RISVNfSU4KU1VCU0VUX0hFUkUKYGBgCgpBcHByb2FjaCAyOiBXaXRoIHBpcGluZwoKMS4gUGlwZSBgZ290X2FsaWFzYCBpbnRvIHRoZSBgc2V0TmFtZXMoKWAgZnVuY3Rpb24sIHRvIG1ha2UgYSBsaXN0IG9mIGFsaWFzZXMsIG5hbWVkIGFmdGVyIHRoZSBwZXJzb24uIERvIHlvdSBuZWVkIGB7YCBoZXJlPwoyLiBUaGVuLCBwaXBlIHRoYXQgaW50byBhIHN1YnNldHRpbmcgZnVuY3Rpb24gdG8gc3Vic2V0IE1lbGlzYW5kcmUuCgpgYGB7cn0KZ290X2FsaWFzICU+JSBGSUxMX1RISVNfSU4KYGBgCgojIyBOZXN0aW5nL1VubmVzdGluZzsgT3BlcmF0aW5nCgpfX1F1ZXN0aW9uX186IFdoYXQgd291bGQgdGlkeSBkYXRhIG9mIGBnb3RfYWxpYXNgIGxvb2sgbGlrZT8gUmVtZW1iZXIgd2hhdCBgZ290X2FsaWFzYCBob2xkczoKCmBgYHtyfQpnb3RfYWxpYXMKYGBgCgpMZXQncyBtYWtlIGEgdGlkeSBkYXRhIGZyYW1lISBGaXJzdCwgbGV0J3MgdGFrZSBhIGNsb3NlciBsb29rIGF0IGB0aWR5cjo6dW5uZXN0KClgIGFmdGVyIG1ha2luZyBhIHRpYmJsZSBvZiBwcmVmZXJyZWQgaWNlIGNyZWFtIGZsYXZvdXJzOgoKYGBge3J9CihpY2VjcmVhbSA8LSB0aWJibGUoCiAgICBuYW1lID0gYygiSmFjb2IiLCAiRWxlbmEiLCAiTWl0Y2hlbGwiKSwKICAgIGZsYXYgPSBsaXN0KGMoInN0cmF3YmVycnkiLCAiY2hvY29sYXRlIiwgImxlbW9uIiksCiAgICAgICAgICAgICAgICBjKCJzdHJhY2lhdGVsbGEiLCAic3RyYXdiZXJyeSIpLAogICAgICAgICAgICAgICAgYygiZ2FybGljIiwgInRpZ2VyIHRhaWwiKSkKKSkKYGBgCgpJIGNhbiBtYWtlIGEgdGlkeSBkYXRhIGZyYW1lIF93aXRob3V0XyBsaXN0IGNvbHVtbnMgdXNpbmcgYHRpZHlyOjp1bm5lc3QoKWA6CgpgYGB7cn0KaWNlY3JlYW0gJT4lIAogICAgdW5uZXN0KGZsYXYpCmBgYAoKSG93IHdvdWxkIEkgc3Vic2V0IGFsbCBwZW9wbGUgdGhhdCBsaWtlIHN0cmF3YmVycnkgaWNlIGNyZWFtPyBXZSBjYW4gZWl0aGVyIHVzZSB0aGUgdGlkeSBkYXRhLCBvciB0aGUgbGlzdCBkYXRhIGRpcmVjdGx5OgoKRnJvbSAibm9ybWFsIiB0aWR5IGRhdGE6CgpgYGB7cn0KaWNlY3JlYW0gJT4lIAogICAgdW5uZXN0KGZsYXYpICU+JSAKICAgIGZpbHRlcihmbGF2ID09ICJzdHJhd2JlcnJ5IikKYGBgCgpGcm9tIGxpc3QtY29sdW1uIGRhdGE6CgpgYGB7cn0KaWNlY3JlYW0gJT4lIAogIGZpbHRlcihtYXBfbGdsKGZsYXYsIH4gRklMTF9USElTX0lOKSkKYGBgCgoKIyMgTmVzdGluZy9Vbm5lc3Rpbmc6IFlvdXIgVHVybgoKYHVubmVzdCgpYCB0aGUgYGdvdF9hbGlhc2AgdGliYmxlLiBIaW50OiB0aGVyZSBzaG91bGQgYmUgYSBoaWNjdXAuIENoZWNrIG91dCB0aGUgYHN0cigpYHVjdHVyZSBvZiBgZ290X2FsaWFzYCAtLSBhcmUgYWxsIGVsZW1lbnRzIG9mIHRoZSBsaXN0IGNvbHVtbiB2ZWN0b3JzPyBXb3VsZCB1c2luZyBgdGlkeXI6OmRyb3BfbmEoKWAgYmUgYSBnb29kIGlkZWEgaGVyZT8KCmBgYHtyfQpGSUxMX1RISVNfSU4KYGBgCgpXZSBjYW4gYWxzbyBkbyB0aGUgb3Bwb3NpdGUgd2l0aCBgdGlkeXI6Om5lc3QoKWAuIFRyeSBpdCB3aXRoIHRoZSBgaXJpc2AgZGF0YSBmcmFtZToKCjEuIEdyb3VwIGJ5IHNwZWNpZXMuCjIuIGBuZXN0KClgIQoKYGBge3J9CkZJTExfVEhJU19JTgpgYGAKCktlZXAgdGhlIG5lc3RlZCBgaXJpc2AgZGF0YSBmcmFtZSBhYm92ZSBnb2luZyEgS2VlcCBwaXBpbmc6CgotIEZpdCBhIGxpbmVhciByZWdyZXNzaW9uIG1vZGVsIHdpdGggYGxtKClgIHRvIGBTZXBhbC5MZW5ndGggfiBTZXBhbC5XaWR0aGAsIHNlcGFyYXRlbHkgZm9yIGVhY2ggc3BlY2llcy4gCiAgICAtIEluc3BlY3QsIHRvIHNlZSB3aGF0J3MgZ29pbmcgb24uCi0gR2V0IHRoZSBzbG9wZSBhbmQgaW50ZXJjZXB0IGluZm9ybWF0aW9uIGJ5IGFwcGx5aW5nIGBicm9vbTo6dGlkeSgpYCB0byB0aGUgb3V0cHV0IG9mIGBsbSgpYC4KLSBgdW5uZXN0YCB0aGUgb3V0cHV0dGVkIGRhdGEgZnJhbWVzIGZyb20gYGJyb29tOjp0aWR5KClgLgoKIyBBcHBsaWNhdGlvbjogVGltZSByZW1haW5pbmc/CgpJZiB0aW1lIHJlbWFpbnMsIGhlcmUgaXMgYSBnb29kIGV4ZXJjaXNlIHRvIHB1dCBldmVyeXRoaW5nIHRvZ2V0aGVyLiAKCltIaWxhcnkgUGFya2VyIHR3ZWV0XShodHRwczovL3R3aXR0ZXIuY29tL2hzcHRlci9zdGF0dXMvNzM5ODg2MjQ0NjkyMjk1NjgwKTogIkhvdyBkbyB5b3Ugc2FtcGxlIGZyb20gZ3JvdXBzLCB3aXRoIGEgZGlmZmVyZW50IHNhbXBsZSBzaXplIGZvciBlYWNoIGdyb3VwPyIKCltTb2x1dGlvbiBieSBKZW5ueSBCcnlhbl0oaHR0cHM6Ly9qZW5ueWJjLmdpdGh1Yi5pby9wdXJyci10dXRvcmlhbC9sczEyX2RpZmZlcmVudC1zaXplZC1zYW1wbGVzLmh0bWwpOgoKMS4gTmVzdCBieSBzcGVjaWVzLgoyLiBTcGVjaWZ5IHNhbXBsZSBzaXplIGZvciBlYWNoIGdyb3VwLgozLiBEbyB0aGUgc3Vic2FtcGxpbmcgb2YgZWFjaCBncm91cC4KCkxldCdzIGdpdmUgaXQgYSB0cnk6CgpgYGB7cn0KCmBgYAoKCiMgU3VtbWFyeToKCi0gdGliYmxlcyBjYW4gaG9sZCBjb2x1bW5zIHRoYXQgYXJlIGxpc3RzLCB0b28hCiAgICAtIFVzZWZ1bCBmb3IgaG9sZGluZyB2YXJpYWJsZS1sZW5ndGggZGF0YS4KICAgIC0gVXNlZnVsIGZvciBob2xkaW5nIHVudXN1YWwgZGF0YSAoZXhhbXBsZTogYSBwcm9iYWJpbGl0eSBkZW5zaXR5IGZ1bmN0aW9uKQogICAgLSBXaGVyZWFzIGBkcGx5cmAgbWFwcyB2ZWN0b3JzIG9mIGxlbmd0aCBgbmAgdG8gYG5gLCBvciBgbmAgdG8gYDFgLi4uCiAgICAtIC4uLmxpc3QgY29sdW1ucyBhbGxvdyB1cyB0byBtYXAgYG5gIHRvIGFueSBnZW5lcmFsIGxlbmd0aCBgbWAgKGV4YW1wbGU6IHJlZ3Jlc3Npb24gb24gZ3JvdXBzKQotIGBwdXJycmAgaXMgYSB1c2VmdWwgdG9vbCBmb3Igb3BlcmF0aW5nIG9uIGxpc3QtY29sdW1ucy4KLSBgcHVycnJgIGFsbG93cyBmb3IgcGFyYWxsZWwgbWFwcGluZyBvZiBpdGVyYWJsZXMgKHZlY3RvcnMvbGlzdHMpIHdpdGggdGhlIGBtYXAyYCBhbmQgYHBtYXBgIGZhbWlsaWVzLgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ2xhc3MgTWVldGluZyA0IFdvcmtzaGVldCIKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6CiAgICBkZl9wcmludDogcGFnZWQKICAgIHRvYzogeWVzCiAgaHRtbF9ub3RlYm9vazoKICAgIG51bWJlcl9zZWN0aW9uczogeWVzCiAgICB0aGVtZTogY2VydWxlYW4KICAgIHRvYzogeWVzCmVkaXRvcl9vcHRpb25zOgogIGNodW5rX291dHB1dF90eXBlOiBpbmxpbmUKLS0tCgpgYGB7cn0Kc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKGxpYnJhcnkodGlkeXZlcnNlKSkKbGlicmFyeShyZXB1cnJyc2l2ZSkKYGBgCgojIFJlc291cmNlcwoKQWxsIGFyZSBmcm9tIFtKZW5ueSdzIGBwdXJycmAgdHV0b3JpYWxdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvKS4gU3BlY2lmaWNhbGx5OgogCi0gUGFyYWxsZWwgbWFwcGluZzogW0plbm55J3MgIlNwZWNpZnlpbmcgdGhlIGZ1bmN0aW9uIGluIG1hcCgpICsgcGFyYWxsZWwgbWFwcGluZyJdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvbHMwM19tYXAtZnVuY3Rpb24tc3ludGF4Lmh0bWwjcGFyYWxsZWxfbWFwKQotIExpc3QgY29sdW1ucyBpbiBkYXRhIGZyYW1lczsgbmVzdGluZzogW0plbm55J3MgIkxpc3QgQ29sdW1ucyJdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvbHMxM19saXN0LWNvbHVtbnMuaHRtbCkuCgpUaGUgYWxsLWVuY29tcGFzc2luZyBhcHBsaWNhdGlvbiBuZWFyIHRoZSBib3R0b20gb2YgdGhpcyB3b3Jrc2hlZXQgaXMgZnJvbSBbSmVubnkncyAiU2FtcGxlIGZyb20gZ3JvdXBzLCBuIHZhcmllcyBieSBncm91cCJdKGh0dHBzOi8vamVubnliYy5naXRodWIuaW8vcHVycnItdHV0b3JpYWwvbHMxMl9kaWZmZXJlbnQtc2l6ZWQtc2FtcGxlcy5odG1sKQoKCgojIFBhcmFsbGVsIE1hcHBpbmcKCldlJ3JlIGdvaW5nIHRvIHdvcmsgd2l0aCB0b3kgY2FzZXMgZmlyc3QgYmVmb3JlIHRoZSBtb3JlIHJlYWxpc3RpYyBkYXRhIGFuYWx5dGljIHRhc2tzLCBiZWNhdXNlIHRoZXkgYXJlIGVhc2llciB0byBsZWFybi4KCldhbnQgdG8gdmVjdG9yaXplIG92ZXIgdHdvIGl0ZXJhYmxlcz8gVXNlIHRoZSBgbWFwMmAgZmFtaWx5OgoKYGBge3J9CmEgPC0gYygxLDIsMykKYiA8LSBjKDQsNSw2KQptYXAyKGEsIGIsIGZ1bmN0aW9uKHgsIHkpIHgqeSkKYGBgCmBgYHtyfQptYXAyKGEsIGIsIH4gLnggKiAueSkKYGBgCmBgYHtyfQptYXAyKGEsIGIsIGAqYCkKYGBgCmBgYHtyfQptYXAyX2RibChhLCBiLCBgKmApCmBgYAoKTW9yZSB0aGFuIDI/IFVzZSB0aGUgYHBtYXBgIGZhbWlseToKCmBgYHtyfQphIDwtIGMoMSwyLDMpCmIgPC0gYyg0LDUsNikKYyA8LSBjKDcsOCw5KQpwbWFwKGxpc3QoYSwgYiwgYyksIGZ1bmN0aW9uKHgsIHksIHopIHgqeSp6KQpgYGAKYGBge3J9CnBtYXAobGlzdChhLCBiLCBjKSwgfiAuLjEgKiAuLjIgKiAuLjMpCiMgcG1hcCBuZWVkcyAiLi4iCmBgYApgYGB7cn0KcG1hcF9kYmwobGlzdChhLCBiLCBjKSwgfiAuLjEgKiAuLjIgKiAuLjMpCmBgYAoKIyMgWW91ciBUdXJuCgpVc2luZyB0aGUgZm9sbG93aW5nIHR3byB2ZWN0b3JzLi4uCgpgYGB7cn0KY29tbXV0ZSA8LSBjKDEwLCA1MCwgMzUpCm5hbWUgPC0gYygiUGFydmVlbiIsICJLYXlkZW4iLCAiU2hhd24iKQpgYGAKCnVzZSBgbWFwMl9jaHIoKWAgdG8gY29tZSB1cCB3aXRoIHRoZSBmb2xsb3dpbmcgb3V0cHV0IGluIHRocmVlIHdheXM6CgpgYGB7cn0Kc3RyX2MobmFtZSwgIiB0YWtlcyAiLCBjb21tdXRlLCAiIG1pbnV0ZXMgdG8gZ2V0IHRvIHdvcmsuIikKYGBgCgoxLiBCeSBkZWZpbmluZyBhIGZ1bmN0aW9uIGJlZm9yZSBmZWVkaW5nIGl0IGludG8gYG1hcDIoKWAgLS0gY2FsbCBpdCBgY29tbV9mdW5gLgoKYGBge3J9CmNvbW1fZnVuIDwtIGZ1bmN0aW9uKHMsIHQpIAogIHN0cl9jKHMsICIgdGFrZXMgIiwgdCwgIiBtaW51dGVzIHRvIGdldCB0byB3b3JrLiIpCm1hcDJfY2hyKG5hbWUsIGNvbW11dGUsIGNvbW1fZnVuKQojIHZlY3RvciBsZW5ndGggbmVlZCB0byBiZSB0aGUgc2FtZQpgYGAKCjIuIEJ5IGRlZmluaW5nIGEgZnVuY3Rpb24gIm9uIHRoZSBmbHkiIHdpdGhpbiB0aGUgYG1hcDIoKWAgZnVuY3Rpb24uCgpgYGB7cn0KbWFwMl9jaHIobmFtZSwgY29tbXV0ZSwgZnVuY3Rpb24ocywgdCkgewogIHN0cl9jKHMsICIgdGFrZXMgIiwgdCwgIiBtaW51dGVzIHRvIGdldCB0byB3b3JrLiIpCn0pCmBgYAoKMy4gQnkgZGVmaW5pbmcgYSBmb3JtdWxhLgoKYGBge3J9Cm1hcDJfY2hyKG5hbWUsIGNvbW11dGUsIH4gc3RyX2MoLngsICJ0YWtlIiwgLnksICJtaW51dGVzIHRvIGdldCB0byB3b3JrLiIpKQpgYGAKCgojIExpc3QgY29sdW1ucwoKIyMgV2hhdCBhcmUgdGhleT8KCkEgdGliYmxlIGNhbiBob2xkIGEgbGlzdCBhcyBhIGNvbHVtbiwgdG9vOgoKYGBge3J9CihsaXN0Y29sX3RpYiA8LSB0aWJibGUoCiAgYSA9IGMoMSwyLDMpLAogIGIgPSBsaXN0KDEsMiwzKSwKICBjID0gbGlzdChzdW0sIHNxcnQsIHN0cl9jKSwKICBkID0gbGlzdCh4PTEsIHk9c3VtLCB6PWlyaXMpCikpCmBgYAoKUHJpbnRpbmcgdG8gc2NyZWVuIGRvZXNuJ3QgcmV2ZWFsIHRoZSBjb250ZW50cyEgYHN0cigpYCBoZWxwcyBoZXJlOgoKYGBge3J9CnN0cihsaXN0Y29sX3RpYikKYGBgCgpFeHRyYWN0IGEgbGlzdCBjb2x1bW4gaW4gdGhlIHNhbWUgd2F5IGFzIGEgdmVjdG9yIGNvbHVtbjoKCmBgYHtyfQpwcmludChsaXN0Y29sX3RpYiRhKSAgIyBWZWN0b3IKYGBgCmBgYHtyfQpwcmludChsaXN0Y29sX3RpYiRiKSAgIyBMaXN0CmBgYAoKVGhpcyBpcyB3aGVyZSBgbWFwKClgIGNvbWVzIGluIGhhbmR5ISBMZXQncyBtYWtlIGEgdGliYmxlIHVzaW5nIHRoZSBgZ290X2NoYXJzYCBkYXRhLCB3aXRoIHR3byBjb2x1bW5zOiAibmFtZSIgYW5kICJhbGlhc2VzIiwgd2hlcmUgImFsaWFzZXMiIGlzIGEgbGlzdC1jb2x1bW4gKHJlbWVtYmVyIHRoYXQgZWFjaCBjaGFyYWN0ZXIgY2FuIGhhdmUgYSBudW1iZXIgb2YgYWxpYXNlcyBkaWZmZXJlbnQgdGhhbiAxKToKCjEuIFBpcGUgYGdvdF9jaGFyc2AgaW50byBge2Agd2l0aCBgdGliYmxlKClgLgoyLiBTcGVjaWZ5IHRoZSBjb2x1bW5zIHdpdGggYHB1cnJyYCBtYXBwaW5ncy4KCmBgYHtyfQpnb3RfY2hhcnNbWzFdXQpnb3RfYWxpYXMgPC0gZ290X2NoYXJzICU+JSB7CiAgdGliYmxlKG5hbWUgPSBtYXBfY2hyKC4sIm5hbWUiKSwKICAgICAgICAgYWxpYXNlcyA9IG1hcCguLCAiYWxpYXNlcyIpKQp9IApnb3RfYWxpYXMKYGBgCgpXcml0ZSB0aGUgc29sdXRpb24gZG93biBjYXJlZnVsbHkgLS0gd2UnbGwgYmUgcmVmZXJyaW5nIHRvIGBnb3RfYWxpYXNgIGxhdGVyLiAKCiMjIE1ha2luZzogWW91ciBUdXJuCgpFeHRyYWN0IHRoZSBhbGlhc2VzIG9mIE1lbGlzYW5kcmUgKGEgY2hhcmFjdGVyIGZyb20gR2FtZSBvZiBUaHJvbmVzKSBmcm9tIHRoZSBgZ290X2FsaWFzYCBkYXRhIGZyYW1lIHdlIGp1c3QgbWFkZS4gVHJ5IHR3byBhcHByb2FjaGVzOgoKQXBwcm9hY2ggMTogV2l0aG91dCBwaXBpbmcKCjEuIE1ha2UgYSBsaXN0IG9mIGFsaWFzZXMgYnkgZXh0cmFjdGluZyB0aGUgbGlzdCBjb2x1bW4gaW4gYGdvdF9hbGlhc2AuCjIuIFNldCB0aGUgbmFtZXMgb2YgdGhpcyBuZXcgbGlzdCBhcyB0aGUgY2hhcmFjdGVyIG5hbWVzIChmcm9tIHRoZSBvdGhlciBjb2x1bW4gb2YgYGdvdF9jaGFyc2ApLgozLiBTdWJzZXQgdGhlIG5ld2x5LW5hbWVkIGxpc3QgdG8gTWVsaXNhbmRyZS4KCmBgYHtyfQooYWxpYXNfbGlzdCA8LSBnb3RfYWxpYXMkYWxpYXNlcykKbmFtZXMoYWxpYXNfbGlzdCkgPC0gZ290X2FsaWFzJG5hbWUKYWxpYXNfbGlzdFtbIk1lbGlzYW5kcmUiXV0KYGBgCgpBcHByb2FjaCAyOiBXaXRoIHBpcGluZwoKMS4gUGlwZSBgZ290X2FsaWFzYCBpbnRvIHRoZSBgc2V0TmFtZXMoKWAgZnVuY3Rpb24sIHRvIG1ha2UgYSBsaXN0IG9mIGFsaWFzZXMsIG5hbWVkIGFmdGVyIHRoZSBwZXJzb24uIERvIHlvdSBuZWVkIGB7YCBoZXJlPwoyLiBUaGVuLCBwaXBlIHRoYXQgaW50byBhIHN1YnNldHRpbmcgZnVuY3Rpb24gdG8gc3Vic2V0IE1lbGlzYW5kcmUuCgpgYGB7cn0KZ290X2FsaWFzICU+JSAKICB7c2V0TmFtZXMoLiRhbGlhc2VzLCAuJG5hbWUpfSAlPiUgCiAgYFtbYCgiTWVsaXNhbmRyZSIpCnNldE5hbWVzKGxldHRlcnMsIExFVFRFUlMpCmBgYAoKIyMgTmVzdGluZy9Vbm5lc3Rpbmc7IE9wZXJhdGluZwoKX19RdWVzdGlvbl9fOiBXaGF0IHdvdWxkIHRpZHkgZGF0YSBvZiBgZ290X2FsaWFzYCBsb29rIGxpa2U/IFJlbWVtYmVyIHdoYXQgYGdvdF9hbGlhc2AgaG9sZHM6CgpgYGB7cn0KZ290X2FsaWFzCmBgYAoKTGV0J3MgbWFrZSBhIHRpZHkgZGF0YSBmcmFtZSEgRmlyc3QsIGxldCdzIHRha2UgYSBjbG9zZXIgbG9vayBhdCBgdGlkeXI6OnVubmVzdCgpYCBhZnRlciBtYWtpbmcgYSB0aWJibGUgb2YgcHJlZmVycmVkIGljZSBjcmVhbSBmbGF2b3VyczoKCmBgYHtyfQooaWNlY3JlYW0gPC0gdGliYmxlKAogICAgbmFtZSA9IGMoIkphY29iIiwgIkVsZW5hIiwgIk1pdGNoZWxsIiksCiAgICBmbGF2ID0gbGlzdChjKCJzdHJhd2JlcnJ5IiwgImNob2NvbGF0ZSIsICJsZW1vbiIpLAogICAgICAgICAgICAgICAgYygic3RyYWNpYXRlbGxhIiwgInN0cmF3YmVycnkiKSwKICAgICAgICAgICAgICAgIGMoImdhcmxpYyIsICJ0aWdlciB0YWlsIikpCikpCmBgYAoKSSBjYW4gbWFrZSBhIHRpZHkgZGF0YSBmcmFtZSBfd2l0aG91dF8gbGlzdCBjb2x1bW5zIHVzaW5nIGB0aWR5cjo6dW5uZXN0KClgOgoKYGBge3J9CmljZWNyZWFtICU+JSAKICAgIHVubmVzdChmbGF2KQpgYGAKCkhvdyB3b3VsZCBJIHN1YnNldCBhbGwgcGVvcGxlIHRoYXQgbGlrZSBzdHJhd2JlcnJ5IGljZSBjcmVhbT8gV2UgY2FuIGVpdGhlciB1c2UgdGhlIHRpZHkgZGF0YSwgb3IgdGhlIGxpc3QgZGF0YSBkaXJlY3RseToKCkZyb20gIm5vcm1hbCIgdGlkeSBkYXRhOgoKYGBge3J9CmljZWNyZWFtICU+JSAKICAgIHVubmVzdChmbGF2KSAlPiUgCiAgICBmaWx0ZXIoZmxhdiA9PSAic3RyYXdiZXJyeSIpCmBgYAoKRnJvbSBsaXN0LWNvbHVtbiBkYXRhOgoKYGBge3J9CmljZWNyZWFtICU+JSAKICBmaWx0ZXIobWFwX2xnbChmbGF2LCB+IGFueSgueCA9PSAic3RyYXdiZXJyeSIpKSkKYGBgCgoKIyMgTmVzdGluZy9Vbm5lc3Rpbmc6IFlvdXIgVHVybgoKYHVubmVzdCgpYCB0aGUgYGdvdF9hbGlhc2AgdGliYmxlLiBIaW50OiB0aGVyZSBzaG91bGQgYmUgYSBoaWNjdXAuIENoZWNrIG91dCB0aGUgYHN0cigpYHVjdHVyZSBvZiBgZ290X2FsaWFzYCAtLSBhcmUgYWxsIGVsZW1lbnRzIG9mIHRoZSBsaXN0IGNvbHVtbiB2ZWN0b3JzPyBXb3VsZCB1c2luZyBgdGlkeXI6OmRyb3BfbmEoKWAgYmUgYSBnb29kIGlkZWEgaGVyZT8KCmBgYHtyfQpnb3RfYWxpYXMgJT4lIAogIGRyb3BfbmEoKSAlPiUgCiAgdW5uZXN0KCkKYGBgCgpXZSBjYW4gYWxzbyBkbyB0aGUgb3Bwb3NpdGUgd2l0aCBgdGlkeXI6Om5lc3QoKWAuIFRyeSBpdCB3aXRoIHRoZSBgaXJpc2AgZGF0YSBmcmFtZToKCjEuIEdyb3VwIGJ5IHNwZWNpZXMuCjIuIGBuZXN0KClgIQoKYGBge3J9CmlyaXMgJT4lIAogIGdyb3VwX2J5KFNwZWNpZXMpIAogIApgYGAKCktlZXAgdGhlIG5lc3RlZCBgaXJpc2AgZGF0YSBmcmFtZSBhYm92ZSBnb2luZyEgS2VlcCBwaXBpbmc6CgotIEZpdCBhIGxpbmVhciByZWdyZXNzaW9uIG1vZGVsIHdpdGggYGxtKClgIHRvIGBTZXBhbC5MZW5ndGggfiBTZXBhbC5XaWR0aGAsIHNlcGFyYXRlbHkgZm9yIGVhY2ggc3BlY2llcy4gCiAgICAtIEluc3BlY3QsIHRvIHNlZSB3aGF0J3MgZ29pbmcgb24uCi0gR2V0IHRoZSBzbG9wZSBhbmQgaW50ZXJjZXB0IGluZm9ybWF0aW9uIGJ5IGFwcGx5aW5nIGBicm9vbTo6dGlkeSgpYCB0byB0aGUgb3V0cHV0IG9mIGBsbSgpYC4KLSBgdW5uZXN0YCB0aGUgb3V0cHV0dGVkIGRhdGEgZnJhbWVzIGZyb20gYGJyb29tOjp0aWR5KClgLgoKIyBBcHBsaWNhdGlvbjogVGltZSByZW1haW5pbmc/CgpJZiB0aW1lIHJlbWFpbnMsIGhlcmUgaXMgYSBnb29kIGV4ZXJjaXNlIHRvIHB1dCBldmVyeXRoaW5nIHRvZ2V0aGVyLiAKCltIaWxhcnkgUGFya2VyIHR3ZWV0XShodHRwczovL3R3aXR0ZXIuY29tL2hzcHRlci9zdGF0dXMvNzM5ODg2MjQ0NjkyMjk1NjgwKTogIkhvdyBkbyB5b3Ugc2FtcGxlIGZyb20gZ3JvdXBzLCB3aXRoIGEgZGlmZmVyZW50IHNhbXBsZSBzaXplIGZvciBlYWNoIGdyb3VwPyIKCltTb2x1dGlvbiBieSBKZW5ueSBCcnlhbl0oaHR0cHM6Ly9qZW5ueWJjLmdpdGh1Yi5pby9wdXJyci10dXRvcmlhbC9sczEyX2RpZmZlcmVudC1zaXplZC1zYW1wbGVzLmh0bWwpOgoKMS4gTmVzdCBieSBzcGVjaWVzLgoyLiBTcGVjaWZ5IHNhbXBsZSBzaXplIGZvciBlYWNoIGdyb3VwLgozLiBEbyB0aGUgc3Vic2FtcGxpbmcgb2YgZWFjaCBncm91cC4KCkxldCdzIGdpdmUgaXQgYSB0cnk6CgpgYGB7cn0KCmBgYAoKCiMgU3VtbWFyeToKCi0gdGliYmxlcyBjYW4gaG9sZCBjb2x1bW5zIHRoYXQgYXJlIGxpc3RzLCB0b28hCiAgICAtIFVzZWZ1bCBmb3IgaG9sZGluZyB2YXJpYWJsZS1sZW5ndGggZGF0YS4KICAgIC0gVXNlZnVsIGZvciBob2xkaW5nIHVudXN1YWwgZGF0YSAoZXhhbXBsZTogYSBwcm9iYWJpbGl0eSBkZW5zaXR5IGZ1bmN0aW9uKQogICAgLSBXaGVyZWFzIGBkcGx5cmAgbWFwcyB2ZWN0b3JzIG9mIGxlbmd0aCBgbmAgdG8gYG5gLCBvciBgbmAgdG8gYDFgLi4uCiAgICAtIC4uLmxpc3QgY29sdW1ucyBhbGxvdyB1cyB0byBtYXAgYG5gIHRvIGFueSBnZW5lcmFsIGxlbmd0aCBgbWAgKGV4YW1wbGU6IHJlZ3Jlc3Npb24gb24gZ3JvdXBzKQotIGBwdXJycmAgaXMgYSB1c2VmdWwgdG9vbCBmb3Igb3BlcmF0aW5nIG9uIGxpc3QtY29sdW1ucy4KLSBgcHVycnJgIGFsbG93cyBmb3IgcGFyYWxsZWwgbWFwcGluZyBvZiBpdGVyYWJsZXMgKHZlY3RvcnMvbGlzdHMpIHdpdGggdGhlIGBtYXAyYCBhbmQgYHBtYXBgIGZhbWlsaWVzLgo=</div>
 
 
 

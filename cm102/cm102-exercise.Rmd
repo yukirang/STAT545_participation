@@ -1,6 +1,6 @@
 ---
 title: "STAT 547 Class Meeting 02 Worksheet"
-output: github_document
+output: html_document
 editor_options: 
   chunk_output_type: inline
 ---
@@ -365,7 +365,7 @@ Convert `words` to pig latin, which involves:
     - Use `str_c()`.
     
 ```{r}
-YOUR_CODE_HERE
+# YOUR_CODE_HERE
 ```
 
 Find all countries that end in "y"

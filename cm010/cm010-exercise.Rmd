@@ -181,8 +181,8 @@ setdiff(z,y)
 ```{r}
 (x <- tibble(x1 = c("B", "C", "D"), x3 = 2:4))
 
-intersect(y,x)
-union(y,x)
+# intersect(y,x)
+# union(y,x)
 ```
 
 ## Types of binding datasets
@@ -215,7 +215,7 @@ Practice these concepts in the following exercises. It might help you to first i
 
 ### 1. Filter the rows of `flights2` by matching "year" and "time_hour" variables to `weather` dataset. Use both `semi_join()` and `anti_join()`
 ```{r}
-  semi_join(flights2 weather) 
+  semi_join(flights2,weather) 
   anti_join(flights2,weather) 
 
 ```

@@ -1,6 +1,6 @@
 ---
 title: "cm013 Exercise"
-output: github_document
+output: html_document
 editor_options: 
   chunk_output_type: inline
 ---
